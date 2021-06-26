@@ -570,6 +570,7 @@ ul.sub-menu {
 
 #slider {
   padding-bottom: 45px;
+ border-bottom: 30px solid #f3f6ff;
 }
 
 .carousel-indicators li {
@@ -2519,5 +2520,95 @@ h2.title {
 .contact-info .social-networks ul li a:hover{
   color: #FE980F;
 }
+.about{
+  position: relative;
+    padding: 30px 0;
+    background:#F0FFFF;
+    border-bottom: 30px solid #f3f6ff;
+}
+.about h5{
+  text-align: center;
+}
+.aboutus-content{
+  text-align: center;
+ font-family:sans-serif;
+ font-size: 15px; 
+ color: #696763;
+      border-bottom: 30px solid #f3f6ff;
+}
 
+.contactus{
+  position: relative;
+    padding: 30px 0;
+    background:#F0FFFF;
+     border-bottom: 30px solid #f3f6ff;
+}
+.contactus h5{
+  text-align: center;
+}
+.contact {
+    position: relative;
+    padding-top: 30px;
+}
 
+.contact .contact-info,
+.contact .contact-form,
+.contact .contact-map {
+    height: 100%;
+    padding: 50px;
+    background: #ffffff;
+   
+}
+
+.contact .contact-info h2 {
+    margin-bottom: 15px;
+}
+
+.contact .contact-info h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.contact .contact-info h3 i {
+    width: 20px;
+    color: #FF6F61;
+    margin-right: 5px;
+}
+
+.contact .social {
+    position: relative;
+    width: 100%;
+}
+
+.contact .social a {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    width: 40px;
+    height: 40px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #FF6F61;
+    border-radius: 4px;
+}
+
+.contact .social a i {
+    color: #FF6F61;
+}
+
+.contact .social a:hover {
+    background: #FF6F61;
+}
+
+.contact .social a:hover i {
+    color: #ffffff;
+}
+
+.contact .contact-map iframe {
+    width: 100%;
+    height: 450px;
+}
+.col-lg-4{
+  text-align: center;
+  justify-content: center;
+}
