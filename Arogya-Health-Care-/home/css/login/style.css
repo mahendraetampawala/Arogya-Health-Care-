@@ -1,0 +1,55 @@
+body {
+  background-color: #3598DC;
+  padding-top: 25px;
+}
+
+form {
+  color: #FEFEFE;
+  padding: 15px 0 35px 0;
+}
+form .row {
+  padding: 15px 80px 15px 80px;
+}
+form h1 {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  margin-bottom: 1.4em;
+  text-align: center;
+}
+form p {
+  text-align: center;
+}
+form p a {
+  font-weight: bold;
+  color: white;
+}
+form p a:hover {
+  color: #CCC;
+}
+form .btn-lg {
+  min-width: 100%;
+  border-radius: 0;
+  margin-top: 1em;
+  margin: 1em 0;
+  background: white;
+  color: #3598DC;
+  border: none;
+}
+form .form-group {
+  margin-bottom: 25px;
+  border-bottom: 1px solid white;
+  min-height: 40px;
+}
+form .form-group label {
+  font-size: 1.6em;
+}
+form .form-group input {
+  border: none;
+  border-radius: 0;
+  background: none;
+  color: white;
+  box-shadow: none;
+}
+form .form-group input:focus {
+  box-shadow: none;
+}
