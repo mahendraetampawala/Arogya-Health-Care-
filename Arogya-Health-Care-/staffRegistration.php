@@ -148,9 +148,14 @@
 					else
 					{
 						move_uploaded_file($img_tmp,$target_file); 	
-						$query= "insert into staffmember values('$username','$workid','$contact','$email','$address','$password','$type','$target_file')";
-						$query_run = mysqli_query($conn,$query);
-						
+						$img_upload = $_FILES["imglink"]["name"];
+
+
+						$write=mysqli_query($conn,"INSERT INTO staffmember(`username`,`workid`,`contact`,`email`,`address`,`password`,`type`,`img`) VALUES('$username','$workid','$contact','$email','$address','$password','$type','$img_upload')");
+
+
+
+
 						if($query_run)
 						{
 							echo '<script type="text/javascript"> alert("User Registered.. Go to login page to login"); location.href ="../index.php" </script>';
@@ -216,7 +221,7 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright Â© 2021 Arogya Health Care Inc. All rights reserved.</p>
+					<p class="pull-left">Copyright © 2021 Arogya Health Care Inc. All rights reserved.</p>
 					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.Arogya.com">Arogya hospitality</a></span></p>
 				</div>
 			</div>
