@@ -11,44 +11,44 @@ $password=$_POST['password'];
 //echo$password; exit();
 if($username && $password)
 {
-	
-	$query=mysqli_query($conn,"SELECT * FROM login WHERE username='$username' ")or die (mysqli_error());
-	$numrows=mysqli_num_rows($query);
-	//echo $numrows;
-	if ($numrows!=0)
-	{
-		while($row=mysqli_fetch_assoc($query))
-		{
-			$dbusername=$row['username'];
-			$dbpassword=$row['password'];
-			//echo $dbpassword; exit();
-		}	
-	
-		if($username==$dbusername && md5($password)==$dbpassword)
-		{
-			//echo"You are in !. ";
-			//$_SESSION['userid'] =$row['id'];
-			$_SESSION['username']=$username;
-			
-			 header("location:dashboard/Admin/index.php");
-		
-		}
-		else
-			echo " <script>alert('incorrect Password...');</script>";
-	}
-	else
-	//die("That user does't exist!");
+  
+  $query=mysqli_query($conn,"SELECT * FROM login WHERE username='$username' ")or die (mysqli_error());
+  $numrows=mysqli_num_rows($query);
+  //echo $numrows;
+  if ($numrows!=0)
+  {
+    while($row=mysqli_fetch_assoc($query))
+    {
+      $dbusername=$row['username'];
+      $dbpassword=$row['password'];
+      //echo $dbpassword; exit();
+    } 
+  
+    if($username==$dbusername && $password==$dbpassword)
+    {
+      //echo"You are in !. ";
+      //$_SESSION['userid'] =$row['id'];
+      $_SESSION['username']=$username;
+      
+       header("location:dashboard/Index/");
+    
+    }
+    else
+      echo " <script>alert('incorrect Password...');</script>";
+  }
+  else
+  //die("That user does't exist!");
 echo " <script>alert('That user does't exist!...');</script>";
 
 }
                                                                                                                                                                                                                                                                                                          
-	else
-	//die("Please enter a username and password");
+  else
+  //die("Please enter a username and password");
 echo " <script>alert('Please enter a username and password...');</script>";
 }
 else
 {
-	session_destroy();
+  session_destroy();
 }
 
 ?>

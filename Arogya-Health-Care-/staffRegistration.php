@@ -52,23 +52,27 @@
 				
 				<input type="file" id="imglink" name="imglink" accept=".jpg,.jpeg,.png" onchange="PreviewImage();"/>
 			</center>
-			
-			<label><b>Email:</b></label><br>
-			<input name="email" type="text" class="inputvalues" placeholder="Enter Your Email" required/><br><br>
+
 			<label><b>Username:</b></label><br>
-			<input name="username" type="text" class="inputvalues" placeholder="Enter Your Username" required/><br><br>
+			<input name="email" type="text" class="inputvalues" placeholder="Enter Your Email(Use your email as the username)" required/><br><br>
+			<label><b>First Name:</b></label><br>
+			<input name="fname" type="text" class="inputvalues" placeholder="Enter Your First Name" required/><br><br>
+			<label><b>Last Name:</b></label><br>
+			<input name="lname" type="text" class="inputvalues" placeholder="Enter Your Last Name" required/><br><br>
+			
+			
 			<label><b>Password:</b></label><br>
 			<input name="password" type="password" class="inputvalues" placeholder="Enter Your Password" required/><br><br>
 			<label><b>Confirm Password:</b></label><br>
 			<input name="cpassword" type="password" class="inputvalues" placeholder="Confirm Your Password" required/><br><br>
 			<label><b>Position:</b></label><br>
-			<select name="position" type="text" class="inputvalues" placeholder="Enter Your District" required/>
+			<select name="position" type="text" class="inputvalues" placeholder="Enter Your Position" required/>
 			<option value="" disabled selected="selected"> Select Category	</option>
-					<option value="Male">Doctor</option>
-					<option value="Male">Nurse</option>
-					<option value="Male">Management Officer</option>
-					<option value="Male">laboror</option>
-					 <option value="Female">attendent</option>
+					<option value="Doctor">Doctor</option>
+					<option value="Nurse">Nurse</option>
+					<option value="Management">Management Officer</option>
+					<option value="laboror">laboror</option>
+					 <option value="attendent">attendent</option>
 					<option value="Other">Other</option>
 			</select>
 			<br><br>
@@ -86,12 +90,14 @@
 			{
 				//echo '<script type="text/javascript"> alert("Sign Up button CLICKED")</script>';
 				$email = $_POST['email'];
-				$username = $_POST['username'];
+				//$username = $_POST['username'];
 				$password = $_POST['password'];
 				$cpassword = $_POST['cpassword'];
 				$position = $_POST['position'];
 				$address=$_POST['address'];
 				$workid=$_POST['workid'];
+				$fname=$_POST['fname'];
+				$lname=$_POST['lname'];
 
 				$img_name = $_FILES['imglink']['name'];
 				$img_size =$_FILES['imglink']['size'];
@@ -137,7 +143,8 @@
 						$img_upload = $_FILES["imglink"]["name"];
 
 
-						$write=mysqli_query($conn,"INSERT INTO patientregister(`email`,`username`,`password`,`position`,`image`,`address`,`Workid`) VALUES('$email','$username','$password','$position','$img_upload','$address','$workid')");
+						$write=mysqli_query($conn,"INSERT INTO patientregister(`email`,`password`,`position`,`image`,`address`,`Workid`,`fname`,`lname`) VALUES('$email','$password','$position','$img_upload','$address','$workid','$fname','$lname')");
+						$logininfor=mysqli_query($conn,"INSERT INTO login(`profile`,`fname`,`lname`,`username`,`password`)VALUES('$img_upload','$fname','$lname','$email','$password')");
 				
 
 
