@@ -44,14 +44,11 @@
 </script>
 
 
-
-
-
-	<div id="main-wrapper" class="form-popup">
-		<form class="myform" action="register.php" method="post" enctype="multipart/form-data">
+	<div id="main-wrapper">
+		<form class="myform" action="staffRegistration.php" method="post" enctype="multipart/form-data">
 			<center>
 				<h2>Registration Form</h2>
-				<img id="uploadPreview" src="imgs/avatar.png" class="avatar"/><br>
+				<img id="uploadPreview" src="images/home/avatar.png" class="avatar"/><br>
 				
 				<input type="file" id="imglink" name="imglink" accept=".jpg,.jpeg,.png" onchange="PreviewImage();"/>
 			</center>
@@ -64,28 +61,21 @@
 			<input name="password" type="password" class="inputvalues" placeholder="Enter Your Password" required/><br><br>
 			<label><b>Confirm Password:</b></label><br>
 			<input name="cpassword" type="password" class="inputvalues" placeholder="Confirm Your Password" required/><br><br>
-			<label><b>Contact:</b></label><br>
-			<input name="Contact" type="text" class="inputvalues" placeholder="Enter Your Contact number" required/><br><br>
-			<label><b>Address:</b></label><br>
-			<input name="Address" type="text" class="inputvalues" placeholder="Enter Your permenent address" required/><br><br>
-			<label><b>WorkID:</b></label><br>
-			<input name="WorkID" type="text" class="inputvalues" placeholder="Enter Your Workid" required/><br><br>
-			 
-
-			<label><b>Type:</b></label><br>
-					<select name="Type" class="inputvalues" id="exampleInputPassword1" placeholder="Enter Your Type" required="">
-					<option value="" disabled selected="selected"> Select Category	</option>
+			<label><b>Position:</b></label><br>
+			<select name="position" type="text" class="inputvalues" placeholder="Enter Your District" required/>
+			<option value="" disabled selected="selected"> Select Category	</option>
 					<option value="Male">Doctor</option>
 					<option value="Male">Nurse</option>
 					<option value="Male">Management Officer</option>
 					<option value="Male">laboror</option>
 					 <option value="Female">attendent</option>
 					<option value="Other">Other</option>
-					</select>
-
-
-
-
+			</select>
+			<br><br>
+			<label><b>Address:</b></label><br>
+						<input name="address" type="text" class="inputvalues" placeholder="Enter Your Address" required/><br><br>
+			<label><b>Work ID:</b></label><br>
+						<input name="workid" type="text" class="inputvalues" placeholder="Enter Your WorkID" required/><br><br>
 
 			<input name="submit_btn" type="submit" id="signup_btn" value="Sign Up"/><br>
 			
@@ -99,24 +89,20 @@
 				$username = $_POST['username'];
 				$password = $_POST['password'];
 				$cpassword = $_POST['cpassword'];
-				$contact = $_POST['Contact'];
-				$address=$_POST['Address'];
-				$workid=$_POST['WorkID'];
-				$type=$_POST['Type'];
+				$position = $_POST['position'];
+				$address=$_POST['address'];
+				$workid=$_POST['workid'];
+
+				$img_name = $_FILES['imglink']['name'];
+				$img_size =$_FILES['imglink']['size'];
+			    $img_tmp =$_FILES['imglink']['tmp_name'];
 				
-				$img_name = $_FILES["imglink"]["name"];
-				$img_size =$_FILES["imglink"]["size"];
-			    $img_tmp =$_FILES["imglink"]["tmp_name"];
-				
-				$directory = 'dashboard/uploads/';
+				$directory = 'uploads/';
 				$target_file = $directory.$img_name;
 				
-				 $temp = $_FILES["imglink"]["tmp_name"]; 
- 				 $error = $_FILES["imglink"]["error"];//size
-
 				if($password==$cpassword)
 				{
-					$query= "select * from staffmember WHERE workid='$email'";
+					$query= "select * from patientregister WHERE email='$email'";
 					$query_run = mysqli_query($conn,$query);
 					
 					if(mysqli_num_rows($query_run)>0)
@@ -151,14 +137,13 @@
 						$img_upload = $_FILES["imglink"]["name"];
 
 
-						$write=mysqli_query($conn,"INSERT INTO staffmember(`username`,`workid`,`contact`,`email`,`address`,`password`,`type`,`img`) VALUES('$username','$workid','$contact','$email','$address','$password','$type','$img_upload')");
+						$write=mysqli_query($conn,"INSERT INTO patientregister(`email`,`username`,`password`,`position`,`image`,`address`,`Workid`) VALUES('$email','$username','$password','$position','$img_upload','$address','$workid')");
+				
 
 
-
-
-						if($query_run)
+						if($write)
 						{
-							echo '<script type="text/javascript"> alert("User Registered.. Go to login page to login"); location.href ="../index.php" </script>';
+							echo '<script type="text/javascript"> alert("User Registered.. Go to login page to login"); location.href ="login.php" </script>';
 							//header("Location:index.php");
 						}
 						else
@@ -193,9 +178,7 @@
 		?>
 		
 	</div>
-
-
-
+	
 
 
 
