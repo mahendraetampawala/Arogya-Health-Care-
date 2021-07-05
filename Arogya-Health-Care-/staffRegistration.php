@@ -103,7 +103,7 @@
 				$img_size =$_FILES['imglink']['size'];
 			    $img_tmp =$_FILES['imglink']['tmp_name'];
 				
-				$directory = 'uploads/';
+				$directory = 'dashboard/Upload/Adminprofile/';
 				$target_file = $directory.$img_name;
 				
 				if($password==$cpassword)

@@ -1,5 +1,6 @@
 <?php include"../inc/connect.php";
  ?>
+
  <!DOCTYPE html>
 <html>
 <head>
