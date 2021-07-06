@@ -7,7 +7,7 @@
 <?php
 
 include("../inc/connect.php") ;
-$query=mysqli_query($conn,"SELECT `loginid`,`patientname`,`mobileno` FROM patient")or die (mysqli_error($db_connect));
+$query=mysqli_query($conn,"SELECT `NIC`,`patientname`,`mobileno`,`gender` FROM patient")or die (mysqli_error($db_connect));
 $numrows=mysqli_num_rows($query)or die (mysqli_error($db_connect));
 //echo $numrows; exit;
     $data = array();
@@ -39,9 +39,7 @@ $row1=$data;
       <div class="box-header with-border ">
         <i class="fa fa-user"></i> <h3 class="box-title">Patient list</h3>
       </div>
-         <div class="box-header">
- <button class="popup" onclick="myFunction()" type="button" ><i class="fa fa-plus-square"></i> Add New patient</button>
-</div>
+         
   
 
  
@@ -68,9 +66,10 @@ $row1=$data;
 <table id="example1" class="table table-bordered table-hover">
 <thead>
  <tr>
-<th>Patient id</th>
-  <th>Name</th>
-  <th>Phone</th>
+<th>Patient NIC</th>
+  <th>Patient Name</th>
+  <th>Patient Phone</th>
+  <th>Patient Gender</th>
   <th>Option</th>
                   
 </tr>
@@ -82,18 +81,19 @@ $row1=$data;
 
 ?> <tr>
  
-<td><?php echo $row['id'];?></td>
-<td><?php echo $row['name'];?></td>
-<td><?php echo $row['phone'];?></td>
-<td><a href="editpatient1.php?id=<?php echo $row['id']; ?>"><span class="btn btn-success bg-green"><i class="fa fa-edit"></i> Edit </span></a>
+<td><?php echo $row['NIC'];?></td>
+<td><?php echo $row['patientname'];?></td>
+<td><?php echo $row['mobileno'];?></td>
+<td><?php echo $row['gender'];?></td>
+<td><a href="editpatient1.php?NIC=<?php echo $row['NIC']; ?>"><span class="btn btn-success bg-green"><i class="fa fa-edit"></i> Edit </span></a>
 
- <a href="info.php?id=<?php echo $row['id']; ?>"><span class="btn btn-primary bg-orange"><i class="fa fa-info"></i> Info</span>&nbsp;&nbsp;
+ <a href="info.php?NIC=<?php echo $row['NIC']; ?>"><span class="btn btn-primary bg-orange"><i class="fa fa-info"></i> Info</span>&nbsp;&nbsp;
 
-  <a href="casehistory.php"> <span class="btn  btn-primary disabled"><i class="fa fa-history"></i> History</span>&nbsp;&nbsp;
+  <a href="casehistory.php?NIC=<?php echo $row['NIC']; ?>"> <span class="btn btn-primary bg-orange"><i class="fa fa-history"></i> History</span>&nbsp;&nbsp;
 
-  <a class="popup" onclick="myFunction()"><span class="btn btn-primary"><i class="fa fa-money"></i> Payment<span class="popuptext" id="myPopup">Get full version at mayuri.infospace@gmail.com</span></span></a>&nbsp;&nbsp;
+   <a href="casehistory.php?NIC=<?php echo $row['NIC']; ?>"> <span class="btn btn-primary bg-orange"><i class="fa fa-money"></i> Payment</span>&nbsp;&nbsp;
 
-  <a href="delete.php?id=<?php echo $row['id']; ?>"><span class="btn btn-danger"><i class="fa fa-trash-o"></i> Delete </span></a></td>
+  <a href="delete.php?id=<?php echo $row['NIC']; ?>"><span class="btn btn-danger"><i class="fa fa-trash-o"></i> Delete </span></a></td>
 </tr>
 <?php }  ?>
   </tbody>
