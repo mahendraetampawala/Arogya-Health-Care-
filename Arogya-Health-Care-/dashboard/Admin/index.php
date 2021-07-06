@@ -59,13 +59,13 @@ if(isset($_POST['submit']))
   $lname=$_POST['lname'];
   $username=$_POST['username'];
   $password=$_POST['password'];
-  $password1=md5("$password");
+  //$password1=md5("$password");
   $Confirmpassword=$_POST['Confirmpassword'];
   if(!empty($password))
   {
     if($password==$Confirmpassword)
     {
-      $write=mysqli_query($conn,"UPDATE login SET profile='$name',fname='$fname',lname='$lname',username='$username',password='$password1' WHERE username='".$_SESSION['username']."'")or die(mysqli_error($db_connect));
+      $write=mysqli_query($conn,"UPDATE login SET profile='$name',fname='$fname',lname='$lname',username='$username',password='$password' WHERE username='".$_SESSION['username']."'")or die(mysqli_error($db_connect));
       $_SESSION['username']=$username;
       echo " <script>alert('Records Successfully Updated..');</script>";
     }

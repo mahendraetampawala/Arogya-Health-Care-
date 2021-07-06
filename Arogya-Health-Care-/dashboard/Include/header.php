@@ -1,5 +1,6 @@
 <?php include"../inc/connect.php";
  ?>
+ 
 
  <!DOCTYPE html>
 <html>
@@ -130,12 +131,13 @@
         <li class="dropdown user user-menu">
          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
           <?php
-$sql="SELECT * FROM login";
+          $sql="SELECT * FROM login WHERE username='".$_SESSION['username']."'";
+
     $write =mysqli_query($conn,$sql) or die(mysqli_error($db_connect));
      $row2=mysqli_fetch_array($write)or die (mysqli_error($db_connect));
      //print_r($row2); exit();
 ?>
-              <img src="../../dashboard/Upload/Adminprofile/<?php echo $row2['profile'];?>" class="user-image" alt="User Image">
+              <img src="../Upload/Adminprofile/<?php echo $row2['profile'];?>" class="user-image" alt="User Image">
               <span class="hidden-xs"><?php echo $row2['fname'];?>&nbsp;
            <?php echo $row2['lname'];?></span>
             </a>

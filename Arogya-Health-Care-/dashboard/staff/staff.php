@@ -7,7 +7,7 @@
 <?php
 
 include("../inc/connect.php") ;
-$query=mysqli_query($conn,"SELECT `loginid`,`patientname`,`mobileno` FROM patient")or die (mysqli_error($db_connect));
+$query=mysqli_query($conn,"SELECT `Workid`,`fname`,`position`,`email` FROM patientregister")or die (mysqli_error($db_connect));
 $numrows=mysqli_num_rows($query)or die (mysqli_error($db_connect));
 //echo $numrows; exit;
     $data = array();
@@ -28,7 +28,7 @@ $row1=$data;
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Patient - List</li>
+        <li class="active">Staff - List</li>
       </ol>
     </section>
 
@@ -37,11 +37,9 @@ $row1=$data;
   <div class="col-xs-12">
     <div class="box box-primary">
       <div class="box-header with-border ">
-        <i class="fa fa-user"></i> <h3 class="box-title">Patient list</h3>
+        <i class="fa fa-user"></i> <h3 class="box-title">Staff list</h3>
       </div>
-         <div class="box-header">
- <button class="popup" onclick="myFunction()" type="button" ><i class="fa fa-plus-square"></i> Add New patient</button>
-</div>
+ 
   
 
  
@@ -68,11 +66,11 @@ $row1=$data;
 <table id="example1" class="table table-bordered table-hover">
 <thead>
  <tr>
-<th>Patient id</th>
+<th>Staff WorkID</th>
   <th>Name</th>
-  <th>Phone</th>
-  <th>Option</th>
-                  
+  <th>Position</th>
+  <th>Email</th>
+   <th>Option</th>               
 </tr>
 </thead>
 <tbody>
@@ -80,20 +78,17 @@ $row1=$data;
      foreach ($row1 as $row)
       {
 
-?> <tr>
+?> 
+<tr>
+
+<td><?php echo $row['Workid'];?></td>
+<td><?php echo $row['fname'];?></td>
+<td><?php echo $row['position'];?></td>
+<td><?php echo $row['email'];?></td>
+<td>
  
-<td><?php echo $row['id'];?></td>
-<td><?php echo $row['name'];?></td>
-<td><?php echo $row['phone'];?></td>
-<td><a href="editpatient1.php?id=<?php echo $row['id']; ?>"><span class="btn btn-success bg-green"><i class="fa fa-edit"></i> Edit </span></a>
-
- <a href="info.php?id=<?php echo $row['id']; ?>"><span class="btn btn-primary bg-orange"><i class="fa fa-info"></i> Info</span>&nbsp;&nbsp;
-
-  <a href="casehistory.php"> <span class="btn  btn-primary disabled"><i class="fa fa-history"></i> History</span>&nbsp;&nbsp;
-
-  <a class="popup" onclick="myFunction()"><span class="btn btn-primary"><i class="fa fa-money"></i> Payment<span class="popuptext" id="myPopup">Get full version at mayuri.infospace@gmail.com</span></span></a>&nbsp;&nbsp;
-
-  <a href="delete.php?id=<?php echo $row['id']; ?>"><span class="btn btn-danger"><i class="fa fa-trash-o"></i> Delete </span></a></td>
+  <a href="delete.php?Workid=<?php echo $row['Workid']; ?>"><span class="btn btn-danger"><i class="fa fa-trash-o"></i> Delete </span></a>
+</td>
 </tr>
 <?php }  ?>
   </tbody>

@@ -10,11 +10,11 @@ include"../inc/connect.php ";
       <div class="user-panel">
         <div class="pull-left image">
            <?php
-$sql="SELECT * FROM login";
+    $sql="SELECT * FROM login WHERE username='".$_SESSION['username']."'";
     $write =mysqli_query($conn,$sql) or die(mysqli_error($db_connect));
      $row2=mysqli_fetch_array($write)or die (mysqli_error($db_connect));
      //print_r($row2?>
-          <img src="../../dashboard/Upload/Adminprofile/<?php echo $row2['profile'];?>" class="img-circle" alt="User Image">
+          <img src="../Upload/Adminprofile/<?php echo $row2['profile'];?>" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p><?php echo $row2['fname'];?>&nbsp;
@@ -41,10 +41,18 @@ $sql="SELECT * FROM login";
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
          </a>
         </li>
-        <li>
-          <a href=".././Index/#########">
-            <i class="fa fa-staff"></i> <span>Staff</span>
-         </a>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user"></i> <span>Staff</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="../staff/staff.php"><i class="fa fa-user"></i> Staff List</a></li>
+            <li><a href="../staff/staffid.php"><i class="fa fa-user"></i> Add New Profile</a></li>
+          
+           </ul>
         </li>
        <li class="treeview">
           <a href="#">
