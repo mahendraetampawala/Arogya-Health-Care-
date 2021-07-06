@@ -1,10 +1,13 @@
+<?php
+  session_start();
+?>
 <?php include"../Include/header.php";?>
 <?php include"../Include/sidebar.php";?>
 <?php
 include("../inc/connect.php") ;
 
 
-//session_start();
+
 if(isset($_POST['submit']))
 {
   //$doctor=$_POST['doctor'];
@@ -56,7 +59,7 @@ if(isset($_POST['submit']))
 include("../inc/connect.php") ;
 
 
-$query=mysqli_query($conn,"SELECT `id`,`name`,`phone` FROM patientregister")or die (mysqli_error());
+$query=mysqli_query($conn,"SELECT `NIC`,`patientname`,`mobileno`,`gender` FROM patient")or die (mysqli_error());
 $numrows=mysqli_num_rows($query)or die (mysqli_error());
     $data = array();
     while ($row = mysqli_fetch_assoc($query)) {
@@ -183,11 +186,12 @@ $row1=$data;
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  
-                  <th>Patient id</th>
-                  <th>Name</th>
-                  <th>Phone</th>
-                  <th>Option</th>
+       
+                  <th>Patient NIC</th>
+                  <th> Patient Name</th>
+                  <th>Patient mobileno</th>
+                  <th>Patient gender</th>
+                  <th>Patient Option</th>
                    
                 </tr>
                 </thead>
@@ -197,10 +201,11 @@ $row1=$data;
       {
 
 ?> <tr>
- <td><?php echo $row['id'];?></td>
-<td><?php echo $row['name'];?></td>
-<td><?php echo $row['phone'];?></td>
-<td><a href="paymenthistory.php?id=<?php echo $row['id'];?>"><span class="btn btn-primary"><i class="fa fa-money"></i> Payment History</a></span></td>
+ <td><?php echo $row['NIC'];?></td>
+<td><?php echo $row['patientname'];?></td>
+<td><?php echo $row['mobileno'];?></td>
+<td><?php echo $row['gender'];?></td>
+<td><a href="paymenthistory.php?NIC=<?php echo $row['NIC'];?>"><span class="btn btn-primary"><i class="fa fa-money"></i> Payment History</a></span></td>
 </tr>
 <?php } ?>
 </tbody>
