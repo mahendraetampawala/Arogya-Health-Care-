@@ -205,7 +205,7 @@ $row1=$data;
 <td><?php echo $row['patientname'];?></td>
 <td><?php echo $row['mobileno'];?></td>
 <td><?php echo $row['gender'];?></td>
-<td><a href="paymenthistory.php?NIC=<?php echo $row['NIC'];?>"><span class="btn btn-primary"><i class="fa fa-money"></i> Payment History</a></span></td>
+<td><a href="addnewpayment.php?NIC=<?php echo $row['NIC'];?>"><span class="btn btn-primary"><i class="fa fa-money"></i> Payment History</a></span></td>
 </tr>
 <?php } ?>
 </tbody>
