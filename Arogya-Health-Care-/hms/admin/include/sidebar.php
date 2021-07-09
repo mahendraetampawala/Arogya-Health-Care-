@@ -173,7 +173,7 @@
 											<i class="ti-files"></i>
 										</div>
 										<div class="item-inner">
-											<span class="title"> Reports </span><i class="icon-arrow"></i>
+
 										</div>
 									</div>
 								</a>
@@ -181,7 +181,7 @@
 									
 									<li>
 										<a href="between-dates-reports.php">
-											<span class="title">B/w dates reports </span>
+
 										</a>
 									</li>
 
@@ -201,6 +201,7 @@
 								</a>
 							</li>
 								</li>
+
 
 						</ul>
 						<!-- end: CORE FEATURES -->
