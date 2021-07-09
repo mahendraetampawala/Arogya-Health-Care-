@@ -173,7 +173,7 @@
 											<i class="ti-files"></i>
 										</div>
 										<div class="item-inner">
-											<span class="title"> Reports </span><i class="icon-arrow"></i>
+											<span class="title"> Patient Invoices </span><i class="icon-arrow"></i>
 										</div>
 									</div>
 								</a>
@@ -181,7 +181,7 @@
 									
 									<li>
 										<a href="between-dates-reports.php">
-											<span class="title">B/w dates reports </span>
+											<span class="title">Invoices </span>
 										</a>
 									</li>
 
@@ -201,6 +201,30 @@
 								</a>
 							</li>
 								</li>
+								<li>
+								<a href="manage-medhistory.php">
+									<div class="item-content">
+										<div class="item-media">
+											<i class="ti-list"></i>
+										</div>
+										<div class="item-inner">
+											<span class="title">Invoices</span>
+										</div>
+									</div>
+								</a>
+									<ul class="sub-menu">
+									
+									<li>
+										<a href="addinvoice.php">
+											<span class="title">Add Invoices </span>
+										</a>
+									</li>
+
+									
+									
+								</ul>
+							
+							</li>
 
 						</ul>
 						<!-- end: CORE FEATURES -->
