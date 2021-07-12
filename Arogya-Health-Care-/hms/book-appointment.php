@@ -15,11 +15,26 @@ $appdate=$_POST['appdate'];
 $time=$_POST['apptime'];
 $userstatus=1;
 $docstatus=1;
+$fname=$_POST['firstname'];
+$email=$_POST['email'];
+$cardname=$_POST['cardname'];
+$cardnumber=$_POST['cardnumber'];
+$cardex=$_POST['expmonth'];
+$cardyear=$_POST['expyear'];
+$cvv=$_POST['cvv'];
+$paidstatus=1;
 $query=mysqli_query($con,"insert into appointment(doctorSpecialization,doctorId,userId,consultancyFees,appointmentDate,appointmentTime,userStatus,doctorStatus) values('$specilization','$doctorid','$userid','$fees','$appdate','$time','$userstatus','$docstatus')");
+
+$sql=mysqli_query($con,"INSERT INTO billing(specilization,doctorid,userid,fees,appdate,ATime,fname,email,cardname,cardnumber,cardex,cardyear,cvv,paidstatus)VALUES('$specilization','$doctorid','$userid','$fees','$appdate','$time','$fname','$email','$cardname','$cardnumber','$cardex','$cardyear','$cvv','$paidstatus')");
 	if($query)
 	{
 		echo "<script>alert('Your appointment successfully booked');</script>";
 	}
+	if($sql)
+	{
+		echo "<script>alert('successfully paid');</script>";
+	}
+
 
 }
 ?>
@@ -117,66 +132,77 @@ function getfee(val) {
 														
 
 
-<div class="form-group">
-															<label for="DoctorSpecialization">
-																Doctor Specialization
-															</label>
+							<div class="form-group">
+								<label for="DoctorSpecialization">
+									Doctor Specialization
+								</label>
 							<select name="Doctorspecialization" class="form-control" onChange="getdoctor(this.value);" required="required">
-																<option value="">Select Specialization</option>
-<?php $ret=mysqli_query($con,"select * from doctorspecilization");
-while($row=mysqli_fetch_array($ret))
-{
-?>
-																<option value="<?php echo htmlentities($row['specilization']);?>">
-																	<?php echo htmlentities($row['specilization']);?>
-																</option>
-																<?php } ?>
+								<option value="">Select Specialization</option>
+					<?php $ret=mysqli_query($con,"select * from doctorspecilization");
+					while($row=mysqli_fetch_array($ret))
+					{
+					?>
+							<option value="<?php echo htmlentities($row['specilization']);?>">
+										<?php echo htmlentities($row['specilization']);?>
+							</option>
+								<?php } ?>
 																
-															</select>
-														</div>
-
-
-
-
-														<div class="form-group">
-															<label for="doctor">
-																Doctors
-															</label>
+							</select>
+							</div>
+					<div class="form-group">
+								<label for="doctor">
+									Doctors
+								</label>
 						<select name="doctor" class="form-control" id="doctor" onChange="getfee(this.value);" required="required">
 						<option value="">Select Doctor</option>
 						</select>
-														</div>
+								</div>
 
-
-
-
-
-														<div class="form-group">
-															<label for="consultancyfees">
-																Consultancy Fees
-															</label>
-					<select name="fees" class="form-control" id="fees"  readonly>
+							<div class="form-group">
+								<label for="consultancyfees">
+									Hospital Charges
+								</label>
+							<select name="fees" class="form-control" id="fees"  readonly>
 						
-						</select>
-														</div>
+							</select>
+							</div>
 														
-<div class="form-group">
-															<label for="AppointmentDate">
-																Date
-															</label>
-<input class="form-control datepicker" name="appdate"  required="required" data-date-format="yyyy-mm-dd">
+						<div class="form-group">
+							<label for="AppointmentDate">
+								Date
+							</label>
+						<input class="form-control datepicker" name="appdate"  required="required" data-date-format="yyyy-mm-dd">
 	
-														</div>
+						</div>
 														
-<div class="form-group">
-															<label for="Appointmenttime">
-														
-														Time
+						<div class="form-group">
+							<label for="Appointmenttime">	
+								Time
 													
-															</label>
-			<input class="form-control" name="apptime" id="timepicker1" required="required">eg : 10:00 PM
-														</div>														
-														
+							</label>
+							<input class="form-control" name="apptime" id="timepicker1" required="required">eg : 10:00 PM
+						</div>			
+						<h3>Billing </h3>
+			            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+			            <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required="required">
+			            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+			            <input type="text" id="email" name="email" placeholder="john@example.com" required="required">	<br>										
+						
+						  
+				            <label for="cname">Name on Card</label>
+				            <input type="text" id="cname" name="cardname" placeholder="John More Doe" required="required">
+				            <label for="ccnum">Credit card number</label>
+				            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"required="required"><br>
+				            <label for="expmonth">Exp Month</label>
+				            <input type="text" id="expmonth" name="expmonth" placeholder="September" required="required">
+				            
+				                <label for="expyear">Exp Year</label>
+				                <input type="text" id="expyear" name="expyear" placeholder="2018"required="required"><br>
+			
+				            
+				                <label for="cvv">CVV</label>
+				                <input type="text" id="cvv" name="cvv" placeholder="352"required="required"><br>
+				            
 														<button type="submit" name="submit" class="btn btn-o btn-primary">
 															Submit
 														</button>

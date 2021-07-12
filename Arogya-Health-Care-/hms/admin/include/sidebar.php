@@ -109,36 +109,6 @@
 
 
 
-				<li>
-								<a href="javascript:void(0)">
-									<div class="item-content">
-										<div class="item-media">
-											<i class="ti-files"></i>
-										</div>
-										<div class="item-inner">
-											<span class="title"> Conatctus Queries </span><i class="icon-arrow"></i>
-										</div>
-									</div>
-								</a>
-								<ul class="sub-menu">
-									
-									<li>
-										<a href="unread-queries.php">
-											<span class="title"> Unread Query </span>
-										</a>
-									</li>
-
-									<li>
-										<a href="read-query.php">
-											<span class="title"> Read Query </span>
-										</a>
-									</li>
-									
-								</ul>
-								</li>
-
-
-
 	<li>
 								<a href="doctor-logs.php">
 									<div class="item-content">
@@ -167,27 +137,17 @@
 								</a>
 							</li>						
 				<li>
-								<a href="javascript:void(0)">
+								<a href="invoices.php">
 									<div class="item-content">
 										<div class="item-media">
 											<i class="ti-files"></i>
 										</div>
 										<div class="item-inner">
-											<span class="title"> Patient Invoices </span><i class="icon-arrow"></i>
+											<span class="title"> Invoices </span><i class=""></i>
 										</div>
 									</div>
 								</a>
-								<ul class="sub-menu">
-									
-									<li>
-										<a href="between-dates-reports.php">
-											<span class="title">Invoices </span>
-										</a>
-									</li>
-
-									
-									
-								</ul>
+						
 								<li>
 								<a href="patient-search.php">
 									<div class="item-content">
@@ -201,30 +161,6 @@
 								</a>
 							</li>
 								</li>
-								<li>
-								<a href="manage-medhistory.php">
-									<div class="item-content">
-										<div class="item-media">
-											<i class="ti-list"></i>
-										</div>
-										<div class="item-inner">
-											<span class="title">Invoices</span>
-										</div>
-									</div>
-								</a>
-									<ul class="sub-menu">
-									
-									<li>
-										<a href="addinvoice.php">
-											<span class="title">Add Invoices </span>
-										</a>
-									</li>
-
-									
-									
-								</ul>
-							
-							</li>
 
 						</ul>
 						<!-- end: CORE FEATURES -->

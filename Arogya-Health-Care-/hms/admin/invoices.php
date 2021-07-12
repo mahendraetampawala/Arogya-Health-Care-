@@ -4,12 +4,11 @@ error_reporting(0);
 include('include/config.php');
 include('include/checklogin.php');
 check_login();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>B/w dates reports | Admin</title>
+		<title>Patients | Appointment History</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -25,16 +24,14 @@ check_login();
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/plugins.css">
 		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
-
-
 	</head>
 	<body>
 		<div id="app">		
 <?php include('include/sidebar.php');?>
 			<div class="app-content">
 				
-						<?php include('include/header.php');?>
-						
+
+					<?php include('include/header.php');?>
 				<!-- end: TOP NAVBAR -->
 				<div class="main-content" >
 					<div class="wrap-content container" id="container">
@@ -42,14 +39,14 @@ check_login();
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">Between Dates | Reports</h1>
+									<h1 class="mainTitle">Patients  | Billing Invoices</h1>
 																	</div>
 								<ol class="breadcrumb">
 									<li>
-										<span>Between Dates</span>
+										<span>Patients </span>
 									</li>
 									<li class="active">
-										<span>Reports</span>
+										<span> Billing Invoices</span>
 									</li>
 								</ol>
 							</div>
@@ -57,61 +54,109 @@ check_login();
 						<!-- end: PAGE TITLE -->
 						<!-- start: BASIC EXAMPLE -->
 						<div class="container-fluid container-fullw bg-white">
-							<div class="row">
+						
+
+									<div class="row">
 								<div class="col-md-12">
 									
-									<div class="row margin-top-30">
-										<div class="col-lg-8 col-md-12">
-											<div class="panel panel-white">
-												<div class="panel-heading">
-													<h5 class="panel-title">Between Dates Reports</h5>
-												</div>
-												<div class="panel-body">
-									
-													<form role="form" method="post" action="betweendates-detailsreports.php">
-														<div class="form-group">
-															<label for="exampleInputPassword1">
-																 From Date:
-															</label>
-					<input type="date" class="form-control" name="fromdate" id="fromdate" value="" required='true'>
-														</div>
-		
-													<div class="form-group">
-															<label for="exampleInputPassword1">
-																 To Date::
-															</label>
-					 <input type="date" class="form-control" name="todate" id="todate" value="" required='true'>
+									<p style="color:red;"><?php echo htmlentities($_SESSION['msg']);?>
+								<?php echo htmlentities($_SESSION['msg']="");?></p>	
+									<table class="table table-hover" id="sample-table-1">
+										<thead>
+											<tr>
+												<th class="center">#</th>
+												<th class="hidden-xs">Doctor Name</th>
+												<th>Patient Name</th>
+												<th>Specialization</th>
+												<th>Hospital cost</th>
+												<th>Card Type</th>
+												<th>Card Number</th>
+												<th>Expire Month</th>
+												<th>Expire Year</th>
+												<th>CVV</th>
+												<th>Current Status</th>
+												<th>Action</th>
+												
+											</tr>
+										</thead>
+										<tbody>
+<?php
+$sql=mysqli_query($con,"select doctors.doctorName as docname,users.fullName as pname,billing.*  from billing join doctors on doctors.id=billing.doctorid join users on users.id=billing.userid ");
+$cnt=1;
+while($row=mysqli_fetch_array($sql))
+{
+?>
 
-														</div>	
-														
-														
-														<button type="submit" name="submit" id="submit" class="btn btn-o btn-primary">
-															Submit
-														</button>
-													</form>
+											<tr>
+												<td class="center"><?php echo $cnt;?>.</td>
+												<td class="hidden-xs"><?php echo $row['docname'];?></td>
+												<td class="hidden-xs"><?php echo $row['pname'];?></td>
+												<td><?php echo $row['doctorSpecialization'];?></td>
+												<td><?php echo $row['consultancyFees'];?></td>
+												<td><?php echo $row['cardname'];?></td>
+												<td><?php echo $row['cardnumber'];?></td>
+												<td><?php echo $row['cardex'];?></td>
+												<td><?php echo $row['cvv'];?></td>
+												
+												<td>
+											<?php if(($row['paidstatus']==1))  
+											{
+												echo "Paid";
+											}
+											if(($row['paidstatus']==0))  
+											{
+												echo "unpaid";
+											}?></td>
+											<td >
+												<div class="visible-md visible-lg hidden-sm hidden-xs">
+											<?php if(($row['paidstatus']==1))  
+											{ 
+
+																								
+											echo "Not paid";
+												 } else {
+
+													echo "Canceled";
+													} ?>
 												</div>
-											</div>
-										</div>
+												<div class="visible-xs visible-sm hidden-md hidden-lg">
+													<div class="btn-group" dropdown is-open="status.isopen">
+														<button type="button" class="btn btn-primary btn-o btn-sm dropdown-toggle" dropdown-toggle>
+															<i class="fa fa-cog"></i>&nbsp;<span class="caret"></span>
+														</button>
+														<ul class="dropdown-menu pull-right dropdown-light" role="menu">
+															<li>
+																<a href="#">
+																	Edit
+																</a>
+															</li>
+															<li>
+																<a href="#">
+																	Share
+																</a>
+															</li>
+															<li>
+																<a href="#">
+																	Remove
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div></td>
+											</tr>
 											
-											</div>
-										</div>
-									<div class="col-lg-12 col-md-12">
-											<div class="panel panel-white">
-												
-												
-											</div>
-										</div>
-									</div>
+											<?php 
+$cnt=$cnt+1;
+											 }?>
+											
+											
+										</tbody>
+									</table>
 								</div>
 							</div>
-						</div>
+								</div>
+						
 						<!-- end: BASIC EXAMPLE -->
-			
-					
-					
-						
-						
-					
 						<!-- end: SELECT BOXES -->
 						
 					</div>
