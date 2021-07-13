@@ -19,9 +19,6 @@
 					</ul>
 				</li>
 				<li><a href="manage-bookings.php"><i class="fa fa-users"></i> Bed Booking</a></li>
-				<li><a href="reg-users.php"><i class="fa fa-users"></i> Reg Users</a></li>
-			
-			<li><a href="update-contactinfo.php"><i class="fa fa-files-o"></i> Update Contact Info</a></li>
-<!-- <li><a href="post-avehical.php">Post New Tractor</a></li> -->
+				
 			</ul>
 		</nav>
