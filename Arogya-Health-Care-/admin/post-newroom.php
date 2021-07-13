@@ -44,7 +44,7 @@ else{
 $query = mysqli_query($conn, $sql);
 if($query)
 {
-$msg="Vehicle posted successfully";
+$msg="Room posted successfully";
 }
 else 
 {
