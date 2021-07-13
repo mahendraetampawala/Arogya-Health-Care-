@@ -119,7 +119,7 @@ $msg=" You have  Successfully discharged";
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
 	
-	<title>Adebayo Medinah Gbemisola</title>
+	<title>Arogya Health Care</title>
 
 	<!-- Font awesome -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">

@@ -178,7 +178,7 @@ include('includes/config.php');
                                 <ul>
                                     <li><a href="about.html">About Hospitals</a></li>
                                     <li><a href="doctors.html">Meet Our Doctors</a></li>
-                                    <li><a href="faq.html">FAQâ€™s</a></li>
+                                    <li><a href="faq.html">FAQ’s</a></li>
                                     <li><a href="testimonials.html">Testimonials</a></li>
                                     <li><a href="project.html">Our Gallery</a></li>
                                     <li><a href="project-single.html">Gallery Single</a></li>
@@ -312,8 +312,7 @@ $sq = "SELECT DISTINCT bed.*,room.Room as bid,COUNT(*) as count, bedding.Status 
            <i class="list-price">Description :</i> <p > <?php echo htmlentities($result['description']);?> </p>
             
               <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result['capacity']);?> Beds</li>
-              <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result['ModelYear']);?> model</li>
-              <li><i class="fa fa-car" aria-hidden="true"></i><?php echo htmlentities($result['FuelType']);?></li>
+
             </ul>
            
           </div>
@@ -418,7 +417,7 @@ $sq = "SELECT DISTINCT bed.*,room.Room as bid,COUNT(*) as count, bedding.Status 
                         <li><a href="#">Working Hours</a></li>
                         <li><a href="#">Procedures</a></li>
                         <li><a href="#">Special Offers</a></li>
-                        <li><a href="#">FAQâ€™s</a></li>
+                        <li><a href="#">FAQ’s</a></li>
                     </ul>
                     <ul class="usefull-links">
                         <li><a href="#">Services</a></li>
@@ -514,7 +513,7 @@ $sq = "SELECT DISTINCT bed.*,room.Room as bid,COUNT(*) as count, bedding.Status 
         <div class="row">
             <div class="col-md-8">
                 <div class="copyright-text">
-                   <p>Copyrights Â© 2021 All Rights Reserved, Powered by <a href="#">Arogya Hospitals.</a></p>
+                   <p>Copyrights © 2021 All Rights Reserved, Powered by <a href="#">Arogya Hospitals.</a></p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -602,7 +601,7 @@ $sq = "SELECT DISTINCT bed.*,room.Room as bid,COUNT(*) as count, bedding.Status 
 
 </body>
 
-<!-- Mirrored from steelthemes.com/demo/html/Hospitals/doctors.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Dec 2017 11:25:39 GMT -->
+
 </html>
 
 

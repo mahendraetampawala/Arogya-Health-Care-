@@ -46,7 +46,7 @@ $error="Your current password is not valid.";
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
 	
-	<title>Olanrewaju Rahamat Tractor Leasing System</title>
+	<title>Arogya Health Care</title>
 
 	<!-- Font awesome -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
