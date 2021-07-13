@@ -81,7 +81,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
 <!-- /Switcher -->  
 
 <!--Header-->
-
+<?php include('includes/header.php');?>
 <!-- /Header --> 
 
 <!--Listing-Image-Slider-->
@@ -257,7 +257,7 @@ $_SESSION['brndid']=$result['bid'];
 <!--/Listing-detail--> 
 
 <!--Footer -->
-
+<?php include('includes/footer.php');?>
 <!-- /Footer--> 
 
 <!--Back to top-->

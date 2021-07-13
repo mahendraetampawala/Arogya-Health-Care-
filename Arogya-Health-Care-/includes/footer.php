@@ -7,8 +7,8 @@
 
 
           <ul>
-        <li><a href="admin/">Admin Login</a></li>
-        <h4 style ="color:red;">Copyright Â© <?php echo Date('Y'); ?> Adebayo Medinah Gbemisola </h4> 
+        <li><a href="admin/">Room Administrator Login</a></li>
+        <h4 style ="color:red;">Copyright © <?php echo Date('Y'); ?> Arogya Hospitality </h4> 
           </ul>
        </div>
 
