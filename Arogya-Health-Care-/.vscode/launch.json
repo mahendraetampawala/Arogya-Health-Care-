@@ -11,6 +11,14 @@
       "port": 9000,
       "cwd": "${workspaceFolder}/dashboard/Include",
       "program": "${workspaceFolder}/dashboard/Include/header.php"
+    },
+    {
+      "name": "Launch index.php",
+      "type": "php",
+      "request": "launch",
+      "port": 9000,
+      "cwd": "${workspaceFolder}/",
+      "program": "${workspaceFolder}/index.php"
     }
   ]
 }
