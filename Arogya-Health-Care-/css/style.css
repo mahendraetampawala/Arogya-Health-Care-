@@ -1,49 +1,6 @@
-
-/***************************************************************************************************************
-||||||||||||||||||||||||||       MASTER STYLESHEET FOR HOSPITALS        |||||||||||||||||||||||||||||||||||||||
-****************************************************************************************************************
-||||||||||||||||||||||||||                TABLE OF CONTENT               |||||||||||||||||||||||||||||||||||||||
-****************************************************************************************************************
-****************************************************************************************************************
-
-01. Imported styles
-02. Flaticon reset styles
-03. Header styles
-04. Mainmenu styles
-05. Rev_slider_wrapper styles
-66. Call to action area Style
-07. Categories area style
-08. Fact counter area style
-09. Latest Blog area style
-10. Latest blog area style 
-11. Testimonial area style
-12. Brand area style
-13. Single service style
-14. Pricing table area style
-15. About page style
-16. Account page style
-17. 404 page style style
-18. Blog page style
-19. Blog single style
-20. Team page style
-21. Shop page style style
-22. Shop with sidebar Style
-23. Shop single Style
-24. Cart page style style
-25. Contact page style
-
-****************************************************************************************************************
-||||||||||||||||||||||||||||            End TABLE OF CONTENT                ||||||||||||||||||||||||||||||||||||
-****************************************************************************************************************/
-
-
 /* Imported styles */
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700');
-
-
-
-
 @import url(imp.css);
 @import url(bootstrap.min.css);
 @import url(font-awesome.min.css);
@@ -1693,7 +1650,7 @@ select:focus {
 .facilities-appointment-area .single-item {
     margin-bottom: 30px;
     position: relative;
-    padding-left: 95px;
+    padding-left: 100px;
     background: #ffffff;
     border: 1px solid #f0f0f0;
     z-index: 1;
@@ -1701,7 +1658,7 @@ select:focus {
 .facilities-appointment-area .single-item:before {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 10;
     width: 100%;
     height: 0%;
     background: #0392ce;
@@ -1936,7 +1893,7 @@ select:focus {
 }
 .single-footer-widget .our-info a i{
     display: inline-block;
-    padding-left: 7px;
+    padding-left: 90px;
     transition: all 500ms ease;
 }
 .single-footer-widget .our-info a:hover{
