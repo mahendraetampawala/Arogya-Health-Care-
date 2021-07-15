@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from steelthemes.com/demo/html/Hospitals/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Dec 2017 11:23:12 GMT -->
+
 <head>
 	<meta charset="UTF-8">
 	<title>Home || Arogya Hospitals </title>
@@ -19,12 +19,10 @@
     <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
 
-    <!-- Fixing Internet Explorer-->
-    <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/html5shiv.js"></script>
-    <![endif]-->
-    
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin>
+        </script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
 </head>
 <body>
 <div class="boxed_wrapper">
@@ -33,32 +31,6 @@
 <div class="preloader"></div>
 <!--End Preloader --> 
 
-<!--Start header area-->
-
-<!--Start top bar area-->
-<!--<section class="top-bar-area">-->
-    <!--<div class="container">-->
-        <!--<div class="row">-->
-            <!--<div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">-->
-                <!--<div class="top-left">-->
-                    <!--<p><span class="flaticon-phone"></span>24 hours emergency & ambulance Service: +321 789 01 2345</p> -->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">-->
-                <!--<div class="top-right clearfix">-->
-                    <!--<ul class="social-links">-->
-                        <!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
-                        <!--<li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
-                        <!--<li><a href="#"><i class="fa fa-google-plus"></i></a></li>-->
-                        <!--<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>-->
-                        <!--<li><a href="#"><i class="fa fa-linkedin"></i></a></li>-->
-                    <!--</ul>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</section>-->
-<!--End top bar area-->  
 
 <!--Start header area--> 
 <section class="header-area">
@@ -67,7 +39,8 @@
             <div class="col-lg-3 col-md-3">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="images/resources/logo.png" alt="Awesome Logo">
+                        <img src="images/logoicon/logo.png" width="180px">
+                        <div id="heading" style="center"></div>
                     </a>
                 </div>
             </div>
@@ -153,11 +126,7 @@
                             <li class="dropdown"><a href="about.html">About Us</a>
                                 <ul>
                                     <li><a href="about.html">About Hospitals</a></li>
-                                    <li><a href="doctors.html">Meet Our Doctors</a></li>
-                                    <li><a href="faq.html">FAQ’s</a></li>
-                                    <li><a href="testimonials.html">Testimonials</a></li>
-                                    <li><a href="project.html">Our Gallery</a></li>
-                                    <li><a href="project-single.html">Gallery Single</a></li>
+                                   
                                 </ul>
                             </li>
 				        <li class="dropdown"><a href="">Login</a>
@@ -168,20 +137,8 @@
                                     
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="departments.html">Departments</a>
-                                <ul>
-                                    <li><a href="cardiac-clinic.html">Cardiac Clinic</a></li>
-                                    <li><a href="pulmonology.html">Pulmonology</a></li>
-                                    <li><a href="gynecology.html">Gynecology</a></li>
-                                    <li><a href="neurology.html">Neurology</a></li>
-                                    <li><a href="urology.html">Urology</a></li>
-                                    <li><a href="gastrology.html">Gastrology</a></li>
-                                    <li><a href="pediatrician.html">Pediatrician</a></li>
-                                    <li><a href="hms/admin">Laborotory</a></li>
-				    <li><a href="laborotory.html">Parasitology</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="time-table.html">Time Table</a></li>
+                   
+                           
                            
                             <li><a href="contact.html">Contact Us</a></li>
                         </ul>
@@ -205,10 +162,12 @@
 
 
 
-
-
-
-
+<script type="text/babel"> 
+    ReactDOM.render(
+        <h2>Arogya Health Care</h2>,
+        document.getElementById('heading')
+    )
+</script>
 
 
 
@@ -240,10 +199,10 @@
                     data-start="1500">
                     <div class="slide-content-box mar-lft">
                         <h1>Hospitals providing total<br> healthcare <span>Solutions.</span></h1>
-                        <p>Denouncing pleasure and praising pain was born and we will <br>give you a complete account of the system.</p>
+                        
                         <div class="button">
-                            <a class="#" href="#">Read More</a>
-                            <a class="btn-style-two" href="#">Departments</a>           
+                            <a class="about.html" href="about.html">Read More</a>
+                                     
                         </div>  
                     </div>
                 </div>
@@ -265,10 +224,10 @@
                     data-start="1500">
                     <div class="slide-content-box">
                         <h1>Hospitals providing total<br> healthcare <span>Solutions.</span></h1>
-                        <p>Denouncing pleasure and praising pain was born and we will <br>give you a complete account of the system.</p>
+                        
                         <div class="button">
-                            <a class="#" href="#">Read More</a>
-                            <a class="btn-style-two" href="#">Departments</a>           
+                            <a class="about.html" href="about.html">Read More</a>
+                                   
                         </div>  
                     </div>
                 </div>
@@ -289,11 +248,10 @@
                     data-responsive_offset="on"
                     data-start="1500">
                     <div class="slide-content-box mar-lft">
-                        <h1>Hospitals providing total<br> healthcare <span>Solutions.</span></h1>
-                        <p>Denouncing pleasure and praising pain was born and we will <br>give you a complete account of the system.</p>
+                        <h1>Hospitals providing total<br> healthcare <span>Solutions.
                         <div class="button">
-                            <a class="#" href="#">Read More</a>
-                            <a class="btn-style-two" href="#">Departments</a>           
+                            <a class="about.html" href="#">Read More</a>
+                                      
                         </div>  
                     </div>
                 </div>
@@ -304,68 +262,7 @@
 </section>
 <!--End rev slider wrapper-->
 
-<!--Start call to action area-->
-<section class="callto-action-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="inner-content">
-                    <div class="title-box text-center">
-                        <span class="flaticon-calendar"></span>
-                        <h2>Make an Appointment</h2>    
-                    </div>
-                    <div class="form-holder clearfix">
-                        <form id="appointment" class="clearfix" name="appointment-form" action="http://steelthemes.com/demo/html/Hospitals/inc/sendmail.php" method="post">
-                            <div class="single-box mar-right-30">    
-                                <div class="input-box">
-                                    <input type="text" name="form_name" value="" placeholder="Your Name" required="">
-                                </div>
-                                <div class="input-box">
-                                    <select class="selectmenu">
-                                        <option selected="selected">Select Doctor</option>
-                                        <option>Marc Parcival</option>
-                                        <option>Alen Bailey</option>
-                                        <option>Basil Andrew</option>
-                                        <option>Giles Franklin</option>
-                                        <option>Edgar Denzil</option>
-                                        <option>Garfield Feris</option>
-                                        <option>Peter Ng'wandu</option>
-                                        <option>Evance Urio</option>
-                                    </select>  
-                                </div>
-                            </div>
-                            <div class="single-box">    
-                                <div class="input-box">  
-                                    <select class="selectmenu">
-                                        <option selected="selected">Select Department</option>
-                                        <option>Cardiology</option>
-                                        <option>Pulmonology</option>
-                                        <option>Gynecology</option>
-                                        <option>Neurology</option>
-					<option>GeneralDoctors</option>
-                                        <option>Urology</option>
-                                        <option>Gastrology</option>
-                                        <option>Pediatrician</option>
-                                        <option>Laboratory</option>
-                                    </select>
-                                </div>
-                                <div class="input-box">
-                                    <input type="text" name="date" placeholder="Select Date" id="datepicker">
-                                    <div class="icon-box">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </div>
-                                </div>       
-                            </div>
-                            <button class="thm-btn bgclr-1" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>    
-                        </form>      
-                    </div> 
-                       
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--End call to action area-->
+
 
 <!--Start Medical Departments area-->
 <section class="medical-departments-area">
@@ -1218,51 +1115,7 @@
                     <!--End facilities carousel-->    
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="appointment">
-                    <div class="sec-title">
-                        <h1>Make an Appointment</h1>
-                        <span class="border"></span>
-                    </div>
-                    <form id="appointment-form" name="appointment-form" action="http://steelthemes.com/demo/html/Hospitals/inc/sendmail.php" method="post">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="input-box">
-                                    <input type="text" name="form_name" value="" placeholder="Your Name" required="">
-                                </div>
-                                <div class="input-box">
-                                    <input type="email" name="form_email" value="" placeholder="Your Email" required="">
-                                </div>
-                                <div class="input-box">
-                                    <select class="selectmenu">
-                                        <option selected="selected">Select Department</option>
-                                        <option>Cardiology</option>
-                                        <option>Pulmonology</option>
-                                        <option>Gynecology</option>
-                                        <option>Neurology</option>
-                                        <option>Urology</option>
-                                        <option>Gastrology</option>
-                                        <option>Pediatrician</option>
-                                        <option>Laboratory</option>
-                                    </select>
-                                </div>
-                                <div class="input-box">   
-                                    <select class="selectmenu">
-                                        <option selected="selected">Select Doctor</option>
-                                        <option>Balance Body Mind</option>
-                                        <option>Physical Activity</option>
-                                        <option>Support & Motivation</option>
-                                        <option>Exercise Program</option>
-                                        <option>Healthy Daily Life</option>
-                                        <option>First Hand Advice</option>
-                                    </select>
-                                </div>
-                                <button class="thm-btn bgclr-1" type="submit">submit</button>        
-                            </div>
-                        </div>
-                    </form>        
-                </div>
-            </div>
+
         </div>
     </div>    
 </section>
@@ -1330,51 +1183,10 @@
 <footer class="footer-area">
     <div class="container">
         <div class="row">
+            
             <!--Start single footer widget-->
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget pd-bottom50">
-                    <div class="title">
-                        <h3>About Hospitals</h3>
-                        <span class="border"></span>
-                    </div>
-                    <div class="our-info">
-                        <p>The relentless service of Hospitals in the past 25 years taken health care to the most modern levels in the region catering to urban & rural.</p>
-                        <p class="mar-top">A Health Care Provider of Western Approach, Hospitals is the most trusted multispecialty hospital.</p>
-                        <a href="#">Know More<i class="fa fa-caret-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!--End single footer widget-->
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget pd-bottom50">
-                    <div class="title">
-                        <h3>Usefull Links</h3>
-                        <span class="border"></span>
-                    </div>
-                    <ul class="usefull-links fl-lft">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Awards</a></li>
-                        <li><a href="#">Consultants</a></li>
-                        <li><a href="#">Working Hours</a></li>
-                        <li><a href="#">Procedures</a></li>
-                        <li><a href="#">Special Offers</a></li>
-                        <li><a href="#">FAQ’s</a></li>
-                    </ul>
-                    <ul class="usefull-links">
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Healthy Foods</a></li>
-                        <li><a href="#">Appointments</a></li>
-                        <li><a href="#">Latest News</a></li>
-                        <li><a href="#">Certificates</a></li>
-                        <li><a href="#">Qualifications</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!--End single footer widget-->
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget mar-bottom">
+            <center>    <div class="single-footer-widget mar-bottom">
                     <div class="title">
                         <h3>Contact Details</h3>
                         <span class="border"></span>
@@ -1415,34 +1227,13 @@
                             </div>
                         </li>
                     </ul>
-                </div>
+                </div></center>
             </div>
             <!--Start single footer widget-->
             <!--Start single footer widget-->
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <div class="single-footer-widget clearfix">
-                    <div class="title">
-                        <h3>Make Your Appointment Now</h3>
-                        <span class="border"></span>
-                    </div>
-                    <form class="appointment-form" action="#">
-                        <div class="input-box">
-                            <input type="text" name="form_name" value="" placeholder="Your Name" required="">
-                            <div class="icon-box">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="input-box">
-                            <input type="email" name="form_email" value="" placeholder="Your Email" required="">
-                            <div class="icon-box">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="input-box">
-                            <textarea name="form_message" placeholder="Your Message.." required="" aria-required="true"></textarea>
-                        </div>
-                        <button type="submit">submit</button>
-                    </form>
+             
                 </div>
             </div>
             <!--End single footer widget-->
