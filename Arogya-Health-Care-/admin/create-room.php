@@ -77,7 +77,7 @@ $error="Something went wrong. Please try again";
 </head>
 
 <body>
-	<?php include('includes/headerr.php');?>
+	<?php include('includes/header.php');?>
 	<div class="ts-main-content">
 	<?php include('includes/leftbar.php');?>
 		<div class="content-wrapper">

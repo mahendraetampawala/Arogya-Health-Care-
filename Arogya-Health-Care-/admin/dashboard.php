@@ -19,7 +19,7 @@ else{
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
 	
-	<title>Adebayo Medinah Gbemisola</title>
+	<title>Arogya Health Care</title>
 
 	<!-- Font awesome -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -40,7 +40,7 @@ else{
 </head>
 
 <body>
-<?php include('includes/headerr.php');?>
+<?php include('includes/header.php');?>
 
 	<div class="ts-main-content">
 <?php include('includes/leftbar.php');?>

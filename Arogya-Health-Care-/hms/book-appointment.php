@@ -102,14 +102,14 @@ function getfee(val) {
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">User | Book Appointment</h1>
+									<h1 class="mainTitle">User | Book Admission</h1>
 																	</div>
 								<ol class="breadcrumb">
 									<li>
 										<span>User</span>
 									</li>
 									<li class="active">
-										<span>Book Appointment</span>
+										<span>Book Admission</span>
 									</li>
 								</ol>
 						</section>
@@ -123,7 +123,7 @@ function getfee(val) {
 										<div class="col-lg-8 col-md-12">
 											<div class="panel panel-white">
 												<div class="panel-heading">
-													<h5 class="panel-title">Book Appointment</h5>
+													<h5 class="panel-title">Addmission</h5>
 												</div>
 												<div class="panel-body">
 								<p style="color:red;"><?php echo htmlentities($_SESSION['msg1']);?>
@@ -133,7 +133,7 @@ function getfee(val) {
 
 
 							<div class="form-group">
-								<label for="DoctorSpecialization">
+								<label for="DoctorSpecialization"><i class="fa fa-user"></i>
 									Doctor Specialization
 								</label>
 							<select name="Doctorspecialization" class="form-control" onChange="getdoctor(this.value);" required="required">
@@ -150,7 +150,7 @@ function getfee(val) {
 							</select>
 							</div>
 					<div class="form-group">
-								<label for="doctor">
+								<label for="doctor"><i class="fa fa-user"></i>
 									Doctors
 								</label>
 						<select name="doctor" class="form-control" id="doctor" onChange="getfee(this.value);" required="required">
@@ -159,7 +159,7 @@ function getfee(val) {
 								</div>
 
 							<div class="form-group">
-								<label for="consultancyfees">
+								<label for="consultancyfees"><i class="fa fa-money"></i>
 									Hospital Charges
 								</label>
 							<select name="fees" class="form-control" id="fees"  readonly>
@@ -168,7 +168,7 @@ function getfee(val) {
 							</div>
 														
 						<div class="form-group">
-							<label for="AppointmentDate">
+							<label for="AppointmentDate"><i class="fa fa-calender"></i>
 								Date
 							</label>
 						<input class="form-control datepicker" name="appdate"  required="required" data-date-format="yyyy-mm-dd">
@@ -176,33 +176,51 @@ function getfee(val) {
 						</div>
 														
 						<div class="form-group">
-							<label for="Appointmenttime">	
+							<label for="Appointmenttime">	<i class="fa fa-time"></i>
 								Time
 													
 							</label>
 							<input class="form-control" name="apptime" id="timepicker1" required="required">eg : 10:00 PM
 						</div>			
 						<h3>Billing </h3>
-			            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-			            <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required="required">
-			            <label for="email"><i class="fa fa-envelope"></i> Email</label>
-			            <input type="text" id="email" name="email" placeholder="john@example.com" required="required">	<br>										
+
 						
-						  
+			            	<label for="fname"> <i class="fa fa-user"></i>
+			            		Full Name
+
+			            	</label>
+			            	<input class="form-control" type="text" id="fname" name="firstname" placeholder="John M. Doe" required="required">
+			  
+
+			  
+			            	<label for="email"><i class="fa fa-envelope"></i> Email</label>
+			            	<input class="form-control" type="text" id="email" name="email" placeholder="john@example.com" required="required">
+			   									
+						
+					 
 				            <label for="cname">Name on Card</label>
-				            <input type="text" id="cname" name="cardname" placeholder="John More Doe" required="required">
+				            <input class="form-control" type="text" id="cname" name="cardname" placeholder="John More Doe" required="required">
+				     
+
 				            <label for="ccnum">Credit card number</label>
-				            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"required="required"><br>
+				            <input class="form-control"type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"required="required">
+				        
+				       
 				            <label for="expmonth">Exp Month</label>
-				            <input type="text" id="expmonth" name="expmonth" placeholder="September" required="required">
-				            
+				            <input class="form-control"type="text" id="expmonth" name="expmonth" placeholder="September" required="required">
+				        
+
+				          
 				                <label for="expyear">Exp Year</label>
-				                <input type="text" id="expyear" name="expyear" placeholder="2018"required="required"><br>
-			
+				                <input class="form-control" type="text" id="expyear" name="expyear" placeholder="2018"required="required"><br>
+						
+
+						
 				            
 				                <label for="cvv">CVV</label>
-				                <input type="text" id="cvv" name="cvv" placeholder="352"required="required"><br>
-				            
+				                <input class="form-control" type="text" id="cvv" name="cvv" placeholder="352"required="required"><br>
+				       
+
 														<button type="submit" name="submit" class="btn btn-o btn-primary">
 															Submit
 														</button>
