@@ -47,6 +47,7 @@ check_login();
 									</li>
 									<li class="active">
 										<span> Billing Invoices</span>
+										<button type="button" onclick="window.print();" class="btn btn-default">Print</button>
 									</li>
 								</ol>
 							</div>
@@ -65,7 +66,7 @@ check_login();
 										<thead>
 											<tr>
 												<th class="center">#</th>
-												<th class="hidden-xs">Doctor Name</th>
+												<th>Doctor Name</th>
 												<th>Patient Name</th>
 												<th>Specialization</th>
 												<th>Hospital cost</th>
@@ -74,8 +75,8 @@ check_login();
 												<th>Expire Month</th>
 												<th>Expire Year</th>
 												<th>CVV</th>
-												<th>Current Status</th>
-												<th>Action</th>
+												<th>Status</th>
+											
 												
 											</tr>
 										</thead>
@@ -89,13 +90,14 @@ while($row=mysqli_fetch_array($sql))
 
 											<tr>
 												<td class="center"><?php echo $cnt;?>.</td>
-												<td class="hidden-xs"><?php echo $row['docname'];?></td>
-												<td class="hidden-xs"><?php echo $row['pname'];?></td>
-												<td><?php echo $row['doctorSpecialization'];?></td>
-												<td><?php echo $row['consultancyFees'];?></td>
+												<td><?php echo $row['docname'];?></td>
+												<td><?php echo $row['pname'];?></td>
+												<td><?php echo $row['specilization'];?></td>
+												<td><?php echo $row['fees'];?></td>
 												<td><?php echo $row['cardname'];?></td>
 												<td><?php echo $row['cardnumber'];?></td>
 												<td><?php echo $row['cardex'];?></td>
+												<td><?php echo $row['cardyear'];?></td>
 												<td><?php echo $row['cvv'];?></td>
 												
 												<td>
@@ -107,42 +109,7 @@ while($row=mysqli_fetch_array($sql))
 											{
 												echo "unpaid";
 											}?></td>
-											<td >
-												<div class="visible-md visible-lg hidden-sm hidden-xs">
-											<?php if(($row['paidstatus']==1))  
-											{ 
-
-																								
-											echo "Not paid";
-												 } else {
-
-													echo "Canceled";
-													} ?>
-												</div>
-												<div class="visible-xs visible-sm hidden-md hidden-lg">
-													<div class="btn-group" dropdown is-open="status.isopen">
-														<button type="button" class="btn btn-primary btn-o btn-sm dropdown-toggle" dropdown-toggle>
-															<i class="fa fa-cog"></i>&nbsp;<span class="caret"></span>
-														</button>
-														<ul class="dropdown-menu pull-right dropdown-light" role="menu">
-															<li>
-																<a href="#">
-																	Edit
-																</a>
-															</li>
-															<li>
-																<a href="#">
-																	Share
-																</a>
-															</li>
-															<li>
-																<a href="#">
-																	Remove
-																</a>
-															</li>
-														</ul>
-													</div>
-												</div></td>
+										
 											</tr>
 											
 											<?php 
@@ -156,8 +123,7 @@ $cnt=$cnt+1;
 							</div>
 								</div>
 						
-						<!-- end: BASIC EXAMPLE -->
-						<!-- end: SELECT BOXES -->
+					
 						
 					</div>
 				</div>
@@ -188,8 +154,7 @@ $cnt=$cnt+1;
 		<script src="vendor/select2/select2.min.js"></script>
 		<script src="vendor/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
 		<script src="vendor/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
-		<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-		<!-- start: CLIP-TWO JAVASCRIPTS -->
+	
 		<script src="assets/js/main.js"></script>
 		<!-- start: JavaScript Event Handlers for this page -->
 		<script src="assets/js/form-elements.js"></script>
@@ -199,7 +164,6 @@ $cnt=$cnt+1;
 				FormElements.init();
 			});
 		</script>
-		<!-- end: JavaScript Event Handlers for this page -->
-		<!-- end: CLIP-TWO JAVASCRIPTS -->
+	
 	</body>
 </html>

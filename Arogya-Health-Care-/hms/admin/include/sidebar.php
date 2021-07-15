@@ -101,7 +101,7 @@
 											<i class="ti-file"></i>
 										</div>
 										<div class="item-inner">
-											<span class="title"> Appointment History </span>
+											<span class="title"> Addmission History </span>
 										</div>
 									</div>
 								</a>

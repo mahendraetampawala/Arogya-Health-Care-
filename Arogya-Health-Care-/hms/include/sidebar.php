@@ -27,7 +27,7 @@
 											<i class="ti-pencil-alt"></i>
 										</div>
 										<div class="item-inner">
-											<span class="title"> Book Appointment </span>
+											<span class="title"> Book Addmission </span>
 										</div>
 									</div>
 								</a>
@@ -40,7 +40,7 @@
 											<i class="ti-list"></i>
 										</div>
 										<div class="item-inner">
-											<span class="title"> Appointment History </span>
+											<span class="title"> Addmission History </span>
 										</div>
 									</div>
 								</a>
