@@ -19,11 +19,12 @@
     <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
 
-    <!-- Fixing Internet Explorer-->
-    <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/html5shiv.js"></script>
-    <![endif]-->
+    
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin>
+        </script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+
     
 </head>
 <body>
@@ -36,12 +37,18 @@
 <!--Start header area-->
 
 <!--Start top bar area-->
+<script type="text/babel"> 
+    ReactDOM.render(
+        <h2>Arogya Health Care</h2>,
+        document.getElementById('heading')
+    )
+</script>
 <section class="top-bar-area">
     <div class="container">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
                 <div class="top-left">
-                    <p><span class="flaticon-phone"></span>24 hours emergency & ambulance Service: +321 789 01 2345</p> 
+                    <p><span class="flaticon-phone"></span>24 hours emergency & ambulance Service: +11 313 13 422</p> 
                 </div>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
@@ -67,20 +74,21 @@
             <div class="col-lg-3 col-md-3">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="images/resources/logo.png" alt="Awesome Logo">
+                      <img src="images/logoicon/logo.png" width="180px">
+                        <div id="heading" style="center"></div>
                     </a>
                 </div>
             </div>
             <div class="col-lg-9 col-md-9">
                 <div class="header-right">
-                    <ul>
+             <ul>
                         <li>
                             <div class="icon-holder">
                                 <span class="flaticon-technology"></span>
                             </div>
                             <div class="text-holder">
-                                <h4>Call us now</h4>
-                                <span>+1-888-987-6543</span>    
+                                <h4>Contact us now</h4>
+                                <span>+11 433 43 224</span>
                             </div>
                         </li>
                         <li>
@@ -89,7 +97,7 @@
                             </div>
                             <div class="text-holder">
                                 <h4>121 Park Drive</h4>
-                                <span>Varick St, Newyork 1006</span>    
+                                <span>Regent Street, Colombo 10</span>
                             </div>
                         </li>
                         <li>
@@ -98,9 +106,9 @@
                             </div>
                             <div class="text-holder">
                                 <h4>Mon - Satday</h4>
-                                <span>09.00am to 18.00pm</span>    
+                                <span>09.00am to 18.00pm</span>
                             </div>
-                        </li>        
+                        </li>
                     </ul>
                     <div class="search-button pull-right">
                         <div class="toggle-search">
@@ -140,7 +148,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <!--Start mainmenu-->
                 <nav class="main-menu pull-left">
-                    <div class="navbar-header">   	
+                    <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -150,65 +158,28 @@
                     <div class="navbar-collapse collapse clearfix">
                         <ul class="navigation clearfix">
                             <li><a href="index.html">Home</a></li>
-                            <li class="dropdown"><a href="about.html">About Us</a>
-                                <ul>
-                                    <li><a href="about.html">About Hospitals</a></li>
-                                    <li><a href="doctors.html">Meet Our Doctors</a></li>
-                                    <li><a href="faq.html">FAQ’s</a></li>
-                                    <li><a href="testimonials.html">Testimonials</a></li>
-                                    <li><a href="project.html">Our Gallery</a></li>
-                                    <li><a href="project-single.html">Gallery Single</a></li>
-                                </ul>
+                            <li><a href="about.html">About Us</a>
                             </li>
-                            <li class="dropdown"><a href="departments.html">Departments</a>
-                                <ul>
-                                    <li><a href="cardiac-clinic.html">Cardiac Clinic</a></li>
-                                    <li><a href="pulmonology.html">Pulmonology</a></li>
-                                    <li><a href="gynecology.html">Gynecology</a></li>
-                                    <li><a href="neurology.html">Neurology</a></li>
-                                    <li><a href="urology.html">Urology</a></li>
-                                    <li><a href="gastrology.html">Gastrology</a></li>
-                                    <li><a href="pediatrician.html">Pediatrician</a></li>
-                                    <li><a href="laborotory.html">Laborotory</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="time-table.html">Time Table</a></li>
-                            <li class="dropdown"><a href="blog-default.html">News</a>
-                                <ul>
-                                    <li><a href="blog-default.html">News Default</a></li>
-                                    <li><a href="blog-large.html">News Large View</a></li>
-                                    <li><a href="blog-single.html">News Single Post</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown"><a href="shop.html">Shop</a>
-                                <ul>
-                                    <li><a href="shop.html">Shop Products</a></li>
-                                    <li><a href="shop-single.html">Products Single</a></li>
-                                    <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="account.html">My Account</a></li>
-                                </ul>
-                            </li>
-                            <li class="current"><a href="contact.html">Contact Us</a></li>
+                            <li class="dropdown current"><a href="contact.html">Contact Us</a></li>
                         </ul>
                     </div>
                 </nav>
                 <!--End mainmenu-->
                 <!--Start mainmenu right box-->
                 <div class="mainmenu-right-box pull-right">
-                    <div class="cart_select">
-                        <button><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>(0)</span></button>
-                    </div>
+                    
                     <div class="consultation-button">
-                        <a href="#">For Consultation services</a>    
+                        <a href="Arogya/registration.php">Patient Registration</a>    
                     </div>
                 </div>
-                <!--End mainmenu right box-->    
+                <!--End mainmenu right box-->
             </div>
         </div>
     </div>
 </section>
 <!--End mainmenu area-->
+                  
+
 
 <!--Start breadcrumb area-->     
 <section class="breadcrumb-area" style="background-image: url(images/resources/breadcrumb-bg.jpg);">
@@ -250,48 +221,12 @@
         <div class="sec-title">
             <h1>Get Touch With Us</h1>
             <span class="border"></span>
-            <div class="select-box pull-right">
-                <select class="text-capitalize selectpicker form-control required" name="form_subject" data-style="g-select" data-width="100%">
-                    <option>Newyork Campus</option>
-                    <option>Canada Campus</option>
-                    <option>UK Campus</option>
-                    <option>USA Campus</option>
-                </select>
-            </div>
+           
         </div>
         <div class="row">
             <div class="col-lg-8 col-md-7">
                 <div class="contact-form">
-                    <form id="contact-form" name="contact_form" class="default-form" action="http://steelthemes.com/demo/html/Hospitals/inc/sendmail.php" method="post">
-                        <h2>Make an Appointment</h2>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" name="form_name" value="" placeholder="Your Name*" required="">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" name="form_email" value="" placeholder="Your Mail*" required="">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" name="form_phone" value="" placeholder="Phone">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" name="form_subject" value="" placeholder="Subject">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <textarea name="form_message" placeholder="Your Message.." required=""></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
-                                <button class="thm-btn bgclr-1" type="submit" data-loading-text="Please wait...">send message</button>
-                            </div>
-                        </div>
-                    </form>  
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.052862282228!2d79.8584284836793!3d6.918886420404401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259733bc85ee5%3A0xbdecf1d596bd806b!2s10%20EW%20Perera%20Mawatha%2C%20Colombo%2000700!5e0!3m2!1sen!2slk!4v1624514110681!5m2!1sen!2slk" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
             <div class="col-lg-4 col-md-5">
@@ -306,7 +241,7 @@
                                 <span class="flaticon-pin"></span>
                             </div>
                             <div class="text-holder">
-                                <h5><span>Address:</span> 121, Park Drive, Varick Str<br>New York, NY 10012, USA</h5>
+                                <h5><span>Address:</span>Regent Street, Colombo 10</h5>
                             </div>
                         </li>
                         <li>
@@ -314,7 +249,7 @@
                                 <span class="flaticon-technology"></span>
                             </div>
                             <div class="text-holder">
-                                <h5><span>Phone:</span> (123) 0200 12345 &<br>1800-45-678-9012</h5>
+                                <h5><span>Phone:</span>+11 424 23 112</h5>
                             </div>
                         </li>
                         <li>
@@ -322,7 +257,7 @@
                                 <span class="flaticon-interface"></span>
                             </div>
                             <div class="text-holder">
-                                <h5><span>Email:</span> Mailus@hospitalteam.com</h5>
+                                <h5><span>Email:</span>info@arogyahealth.com</h5>
                             </div>
                         </li>
                     </ul>
@@ -341,73 +276,14 @@
 </section>
 <!--End contact form area-->  
 
-<!--Start contact map area-->
-<section class="contact-map-area">
-    <div class="container-fluid">
-        <div class="google-map-inner">
-            <div 
-                class="google-map" 
-                id="contact-google-map" 
-                data-map-lat="44.529688" 
-                data-map-lng="-72.933009" 
-                data-icon-path="images/resources/map-marker.png" 
-                data-map-title="Brooklyn, New York, United Kingdom" 
-                data-map-zoom="12" 
-                data-markers='{
-                    "marker-1": [44.529688, -72.933009, "<h4>Head Office</h4><p>44/77 Alabama, a western U.S.A</p>"]
-                }'>
-            </div>
-        </div>  
-    </div>
-</section>
-<!--End contact map area-->
 
-<!--Start footer area-->  
+
+<!--Start footer area-->
 <footer class="footer-area">
     <div class="container">
         <div class="row">
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget pd-bottom50">
-                    <div class="title">
-                        <h3>About Hospitals</h3>
-                        <span class="border"></span>
-                    </div>
-                    <div class="our-info">
-                        <p>The relentless service of Hospitals in the past 25 years taken health care to the most modern levels in the region catering to urban & rural.</p>
-                        <p class="mar-top">A Health Care Provider of Western Approach, Hospitals is the most trusted multispecialty hospital.</p>
-                        <a href="#">Know More<i class="fa fa-caret-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!--End single footer widget-->
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget pd-bottom50">
-                    <div class="title">
-                        <h3>Usefull Links</h3>
-                        <span class="border"></span>
-                    </div>
-                    <ul class="usefull-links fl-lft">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Awards</a></li>
-                        <li><a href="#">Consultants</a></li>
-                        <li><a href="#">Working Hours</a></li>
-                        <li><a href="#">Procedures</a></li>
-                        <li><a href="#">Special Offers</a></li>
-                        <li><a href="#">FAQ’s</a></li>
-                    </ul>
-                    <ul class="usefull-links">
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Healthy Foods</a></li>
-                        <li><a href="#">Appointments</a></li>
-                        <li><a href="#">Latest News</a></li>
-                        <li><a href="#">Certificates</a></li>
-                        <li><a href="#">Qualifications</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!--End single footer widget-->
+
+            
             <!--Start single footer widget-->
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <div class="single-footer-widget mar-bottom">
@@ -421,7 +297,7 @@
                                 <span class="flaticon-pin"></span>
                             </div>
                             <div class="text-holder">
-                                <h5>Park Drive, Varick Str New York,<br> NY 10012, USA</h5>
+                                <h5>Regent Street, Colombo 10</h5>
                             </div>
                         </li>
                         <li>
@@ -429,7 +305,7 @@
                                 <span class="flaticon-interface"></span>
                             </div>
                             <div class="text-holder">
-                                <h5>Getwell@Hospitals.com</h5>
+                                <h5>info@arogyahealth.com</h5>
                             </div>
                         </li>
                         <li>
@@ -437,7 +313,7 @@
                                 <span class="flaticon-technology-1"></span>
                             </div>
                             <div class="text-holder">
-                                <h5>(123) 0200 12345 & 7890</h5>
+                                <h5>+11 424 23 112</h5>
                             </div>
                         </li>
                         <li>
@@ -452,37 +328,10 @@
                 </div>
             </div>
             <!--Start single footer widget-->
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget clearfix">
-                    <div class="title">
-                        <h3>Make an Appointment</h3>
-                        <span class="border"></span>
-                    </div>
-                    <form class="appointment-form" action="#">
-                        <div class="input-box">
-                            <input type="text" name="form_name" value="" placeholder="Your Name" required="">
-                            <div class="icon-box">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="input-box">
-                            <input type="email" name="form_email" value="" placeholder="Your Email" required="">
-                            <div class="icon-box">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="input-box">
-                            <textarea name="form_message" placeholder="Your Message.." required="" aria-required="true"></textarea>
-                        </div>
-                        <button type="submit">submit</button>
-                    </form>
-                </div>
-            </div>
-            <!--End single footer widget-->
+           
         </div>
     </div>
-</footer>   
+</footer>
 <!--End footer area-->
 
 <!--Start footer bottom area-->
@@ -579,5 +428,5 @@
 
 </body>
 
-<!-- Mirrored from steelthemes.com/demo/html/Hospitals/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Dec 2017 11:28:30 GMT -->
+
 </html>

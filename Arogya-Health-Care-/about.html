@@ -19,11 +19,10 @@
     <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
 
-    <!-- Fixing Internet Explorer-->
-    <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/html5shiv.js"></script>
-    <![endif]-->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin>
+        </script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
 
 </head>
 <body>
@@ -67,7 +66,8 @@
             <div class="col-lg-3 col-md-3">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="images/resources/logo.png" alt="Awesome Logo">
+                       <img src="images/logoicon/logo.png" width="180px">
+                        <div id="heading" style="center"></div>
                     </a>
                 </div>
             </div>
@@ -132,7 +132,12 @@
     </div>
 </section>
 <!--End header-search  area-->
-
+<script type="text/babel"> 
+    ReactDOM.render(
+        <h2>Arogya Health Care</h2>,
+        document.getElementById('heading')
+    )
+</script>
 <!--Start mainmenu area-->
 <section class="mainmenu-area stricky">
     <div class="container">
@@ -151,29 +156,7 @@
                         <ul class="navigation clearfix">
                             <li><a href="index.html">Home</a></li>
                             <li class="dropdown current"><a href="about.html">About Us</a>
-                                <ul>
-                                    <li><a href="about.html">About Hospitals</a></li>
-                                    <li><a href="doctors.html">Meet Our Doctors</a></li>
-                                    <li><a href="faq.html">FAQ’s</a></li>
-                                    <li><a href="testimonials.html">Testimonials</a></li>
-                                    <li><a href="project.html">Our Gallery</a></li>
-                                    <li><a href="project-single.html">Gallery Single</a></li>
-                                </ul>
                             </li>
-                            <li class="dropdown"><a href="departments.html">Departments</a>
-                                <ul>
-                                    <li><a href="cardiac-clinic.html">Cardiac Clinic</a></li>
-                                    <li><a href="pulmonology.html">Pulmonology</a></li>
-                                    <li><a href="gynecology.html">Gynecology</a></li>
-                                    <li><a href="neurology.html">Neurology</a></li>
-                                    <li><a href="urology.html">Urology</a></li>
-                                    <li><a href="gastrology.html">Gastrology</a></li>
-                                    <li><a href="pediatrician.html">Pediatrician</a></li>
-                                    <li><a href="laborotory.html">Laborotory</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="time-table.html">Time Table</a></li>
-                           
                             <li><a href="contact.html">Contact Us</a></li>
                         </ul>
                     </div>
@@ -242,7 +225,7 @@
             <div class="col-md-6">
                 <div class="text-holder">
                     <div class="title">
-                        <h1>Welcome to the Hospitals</h1>
+                        <h1>Welcome to the Arogya Hospitals</h1>
                         <p>It is a long established fact that a reader will be distracted by the readable content more or less normal distribution of letters opposed.</p>
                     </div>
                     <ul>
@@ -253,7 +236,7 @@
                                 </div>
                                 <div class="text-box">
                                     <h3>Our Mission</h3>
-                                    <p>Reader will be distracted by the readable content of a page when looking at its layout the point of using more or less normal distribution.</p>
+                                    <p>Our mission is to elevate the status of the  hospital  to  a  modern, leading  health  care  facility and training center by developing and sustaining the infrastructure and human resources and  by  creating  a patient friendly environment where patient care needs will  be of highest priority.</p>
                                 </div>
                             </div>
                         </li>
@@ -264,18 +247,13 @@
                                 </div>
                                 <div class="text-box">
                                     <h3>Our Vision</h3>
-                                    <p>Explain to you how all this mistaken idea of denouncing pleasure.</p>
-                                    <div class="text">
-                                        <p><i class="fa fa-hand-o-right"></i>Idea of denouncing pleasure and praising.</p>
-                                        <p><i class="fa fa-hand-o-right"></i>Pleasure and praising pain was complete system.</p>
-                                    </div>
-                                </div>
+                                    <p>To be the safest tertiary care hospital in Sri Lanka.</p>
+                                    
+                                                                </div>
                             </div>
                         </li>
                     </ul>
-                    <div class="button">
-                        <a class="thm-btn bgclr-1" href="#">Our Departments</a>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -372,169 +350,7 @@
 </section>
 <!--End special features area-->
 
-<!--Start slogan area-->
-<section class="slogan-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="title pull-left">
-                    <h2>If you are a patient seeking quality healthcare at affordable prices!.</h2>
-                </div>
-                <div class="button pull-right">
-                    <a class="thm-btn bgclr-1" href="#">Make an Appointment</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--End slogan area-->
 
-<!--Start project faq area-->
-<section class="project-faq-area sec-padding">
-    <div class="container">
-        <div class="sec-title mar0auto text-center">
-            <h1>Photo Gallery & FAQ’s</h1>
-            <span class="border"></span>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div class="latest-project">
-                    <!--Start single blog post-->
-                    <div class="single-project-item">
-                        <div class="img-holder">
-                            <img src="images/projects/latest-project-1.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="projects-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single blog post-->
-                    <!--Start single blog post-->
-                    <div class="single-project-item">
-                        <div class="img-holder">
-                            <img src="images/projects/latest-project-2.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="projects-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single blog post-->
-                    <!--Start single blog post-->
-                    <div class="single-project-item">
-                        <div class="img-holder">
-                            <img src="images/projects/latest-project-3.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="projects-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single blog post-->
-                    <!--Start single blog post-->
-                    <div class="single-project-item">
-                        <div class="img-holder">
-                            <img src="images/projects/latest-project-4.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="projects-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single blog post-->
-                    <!--Start single blog post-->
-                    <div class="single-project-item">
-                        <div class="img-holder">
-                            <img src="images/projects/latest-project-5.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="projects-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single blog post-->
-                    <!--Start single blog post-->
-                    <div class="single-project-item">
-                        <div class="img-holder">
-                            <img src="images/projects/latest-project-6.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="projects-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single blog post-->
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div class="faq-content">
-                    <div class="accordion-box">
-                        <!--Start single accordion box-->
-                        <div class="accordion accordion-block">
-                            <div class="accord-btn">
-                                <h4>Where is the hospital located?</h4>
-                            </div>
-                            <div class="accord-content">
-                                <p>A Patient Centered Medical Home is a model of healthcare delivery in which care is tailored to the needs & preferences of patients, the Patient Centered Medical  model encourages.</p>
-                            </div>
-                        </div>
-                        <!--End single accordion box-->
-                        <!--Start single accordion box-->
-                        <div class="accordion accordion-block">
-                            <div class="accord-btn active">
-                                <h4>What is the deposit amount for admission?</h4>
-                            </div>
-                            <div class="accord-content collapsed">
-                                <p>A Patient Centered Medical Home is a model of healthcare delivery in which care is tailored to the needs & preferences of patients, the Patient Centered Medical  model encourages.</p>
-                            </div>
-                        </div>
-                        <!--End single accordion box-->
-                        <!--Start single accordion box-->
-                        <div class="accordion accordion-block last">
-                            <div class="accord-btn last">
-                                <h4>What are the visiting hours?</h4>
-                            </div>
-                            <div class="accord-content">
-                                <p>A Patient Centered Medical Home is a model of healthcare delivery in which care is tailored to the needs & preferences of patients, the Patient Centered Medical  model encourages.</p>
-                            </div>
-                        </div>
-                        <!--End single accordion box-->
-                        <!--Start single accordion box-->
-                        <div class="accordion accordion-block">
-                            <div class="accord-btn">
-                                <h4>How many visitors are allowed at a time?</h4>
-                            </div>
-                            <div class="accord-content">
-                                <p>A Patient Centered Medical Home is a model of healthcare delivery in which care is tailored to the needs & preferences of patients, the Patient Centered Medical  model encourages.</p>
-                            </div>
-                        </div>
-                        <!--End single accordion box-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--End project faq area-->
 
 <!--Start fact counter area-->
 <section class="fact-counter-area black-bg" style="background-image:url(images/resources/fact-counter-bg-v2.jpg);">
@@ -830,48 +646,8 @@
 <footer class="footer-area">
     <div class="container">
         <div class="row">
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget pd-bottom50">
-                    <div class="title">
-                        <h3>About Hospitals</h3>
-                        <span class="border"></span>
-                    </div>
-                    <div class="our-info">
-                        <p>The relentless service of Hospitals in the past 25 years taken health care to the most modern levels in the region catering to urban & rural.</p>
-                        <p class="mar-top">A Health Care Provider of Western Approach, Hospitals is the most trusted multispecialty hospital.</p>
-                        <a href="#">Know More<i class="fa fa-caret-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!--End single footer widget-->
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget pd-bottom50">
-                    <div class="title">
-                        <h3>Usefull Links</h3>
-                        <span class="border"></span>
-                    </div>
-                    <ul class="usefull-links fl-lft">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Awards</a></li>
-                        <li><a href="#">Consultants</a></li>
-                        <li><a href="#">Working Hours</a></li>
-                        <li><a href="#">Procedures</a></li>
-                        <li><a href="#">Special Offers</a></li>
-                        <li><a href="#">FAQ’s</a></li>
-                    </ul>
-                    <ul class="usefull-links">
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Healthy Foods</a></li>
-                        <li><a href="#">Appointments</a></li>
-                        <li><a href="#">Latest News</a></li>
-                        <li><a href="#">Certificates</a></li>
-                        <li><a href="#">Qualifications</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!--End single footer widget-->
+
+            
             <!--Start single footer widget-->
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <div class="single-footer-widget mar-bottom">
@@ -885,7 +661,7 @@
                                 <span class="flaticon-pin"></span>
                             </div>
                             <div class="text-holder">
-                                <h5>Park Drive, Varick Str New York,<br> Regent Street, Colombo 10</h5>
+                                <h5>Regent Street, Colombo 10</h5>
                             </div>
                         </li>
                         <li>
@@ -916,34 +692,7 @@
                 </div>
             </div>
             <!--Start single footer widget-->
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget clearfix">
-                    <div class="title">
-                        <h3>Make an Appointment</h3>
-                        <span class="border"></span>
-                    </div>
-                    <form class="appointment-form" action="#">
-                        <div class="input-box">
-                            <input type="text" name="form_name" value="" placeholder="Your Name" required="">
-                            <div class="icon-box">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="input-box">
-                            <input type="email" name="form_email" value="" placeholder="Your Email" required="">
-                            <div class="icon-box">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="input-box">
-                            <textarea name="form_message" placeholder="Your Message.." required="" aria-required="true"></textarea>
-                        </div>
-                        <button type="submit">submit</button>
-                    </form>
-                </div>
-            </div>
-            <!--End single footer widget-->
+           
         </div>
     </div>
 </footer>
@@ -1043,5 +792,5 @@
 
 </body>
 
-<!-- Mirrored from steelthemes.com/demo/html/Hospitals/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Dec 2017 11:25:19 GMT -->
+
 </html>
