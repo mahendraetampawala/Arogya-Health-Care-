@@ -209,7 +209,7 @@ include('includes/config.php');
                 <div class="mainmenu-right-box pull-right">
                     
                     <div class="consultation-button">
-                        <a href="Arogya/registration.php">Patient Registration</a>    
+                        <a href="hms/registration.php">Patient Registration</a>    
                     </div>
                 </div>  
             </div>
