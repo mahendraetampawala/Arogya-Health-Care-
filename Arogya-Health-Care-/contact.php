@@ -1,5 +1,5 @@
 <?php
-include_once('Arogya/include/config.php');
+include_once('hms/include/config.php');
 if(isset($_POST['submit']))
 {
 $name=$_POST['fullname'];
@@ -17,7 +17,7 @@ echo "<script>window.location.href ='contact.php'</script>";
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Arogya | Contact us</title>
+		<title>HMS | Contact us</title>
 		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
 		<link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
 	</head>
