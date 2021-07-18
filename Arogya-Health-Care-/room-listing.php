@@ -91,7 +91,7 @@ include('includes/config.php');
             <div class="col-lg-3 col-md-3">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="images/resources/logo.png" alt="Awesome Logo">
+                       <img src="images/logoicon/logo.png" width="180px">
                     </a>
                 </div>
             </div>
@@ -174,31 +174,14 @@ include('includes/config.php');
                     <div class="navbar-collapse collapse clearfix">
                         <ul class="navigation clearfix">
                             <li><a href="index.html">Home</a></li>
-                            <li class="dropdown current"><a href="about.html">About Us</a>
+                                                      <li class="dropdown"><a href="about.html">About Us</a>
                                 <ul>
                                     <li><a href="about.html">About Hospitals</a></li>
-                                    <li><a href="doctors.html">Meet Our Doctors</a></li>
-                                    <li><a href="faq.html">FAQ’s</a></li>
-                                    <li><a href="testimonials.html">Testimonials</a></li>
-                                    <li><a href="project.html">Our Gallery</a></li>
-                                    <li><a href="project-single.html">Gallery Single</a></li>
+                                   
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="departments.html">Departments</a>
-                                <ul>
-                                    <li><a href="cardiac-clinic.html">Cardiac Clinic</a></li>
-                                    <li><a href="pulmonology.html">Pulmonology</a></li>
-                                    <li><a href="gynecology.html">Gynecology</a></li>
-                                    <li><a href="neurology.html">Neurology</a></li>
-                                    <li><a href="urology.html">Urology</a></li>
-                                    <li><a href="gastrology.html">Gastrology</a></li>
-                                    <li><a href="pediatrician.html">Pediatrician</a></li>
-                                    <li><a href="laborotory.html">Laborotory</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="time-table.html">Time Table</a></li>
                         
-                           <li><a href="time-table.html">Rooms</a></li>
+                           <li class="current"><a href="room-listing.php">Rooms</a></li>
 
                             <li><a href="contact.html">Contact Us</a></li>
                         </ul>
@@ -336,9 +319,6 @@ $sq = "SELECT DISTINCT bed.*,room.Room as bid,COUNT(*) as count, bedding.Status 
 
 
 
-<!--Back to top-->
-<div id="back-top" class="back-top"> <a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i> </a> </div>
-<!--/Back to top--> 
 
 <!--Login-Form -->
 <?php include('includes/login.php');?>
@@ -383,56 +363,14 @@ $sq = "SELECT DISTINCT bed.*,room.Room as bid,COUNT(*) as count, bedding.Status 
 
 
 
-
 <!--Start footer area-->  
 <footer class="footer-area">
     <div class="container">
         <div class="row">
+            
             <!--Start single footer widget-->
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget pd-bottom50">
-                    <div class="title">
-                        <h3>About Hospitals</h3>
-                        <span class="border"></span>
-                    </div>
-                    <div class="our-info">
-                        <p>The relentless service of Hospitals in the past 25 years taken health care to the most modern levels in the region catering to urban & rural.</p>
-                        <p class="mar-top">A Health Care Provider of Western Approach, Hospitals is the most trusted multispecialty hospital.</p>
-                        <a href="#">Know More<i class="fa fa-caret-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!--End single footer widget-->
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget pd-bottom50">
-                    <div class="title">
-                        <h3>Usefull Links</h3>
-                        <span class="border"></span>
-                    </div>
-                    <ul class="usefull-links fl-lft">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Awards</a></li>
-                        <li><a href="#">Consultants</a></li>
-                        <li><a href="#">Working Hours</a></li>
-                        <li><a href="#">Procedures</a></li>
-                        <li><a href="#">Special Offers</a></li>
-                        <li><a href="#">FAQ’s</a></li>
-                    </ul>
-                    <ul class="usefull-links">
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Healthy Foods</a></li>
-                        <li><a href="#">Appointments</a></li>
-                        <li><a href="#">Latest News</a></li>
-                        <li><a href="#">Certificates</a></li>
-                        <li><a href="#">Qualifications</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!--End single footer widget-->
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget mar-bottom">
+            <center>    <div class="single-footer-widget mar-bottom">
                     <div class="title">
                         <h3>Contact Details</h3>
                         <span class="border"></span>
@@ -443,7 +381,9 @@ $sq = "SELECT DISTINCT bed.*,room.Room as bid,COUNT(*) as count, bedding.Status 
                                 <span class="flaticon-pin"></span>
                             </div>
                             <div class="text-holder">
-                                <h5>Park Drive, Varick Str New York,<br> Regent Street, Colombo 10</h5>
+
+
+                                <h5>  121 Park Drive  <br> Regent Street, Colombo 10</h5>
                             </div>
                         </li>
                         <li>
@@ -459,7 +399,7 @@ $sq = "SELECT DISTINCT bed.*,room.Room as bid,COUNT(*) as count, bedding.Status 
                                 <span class="flaticon-technology-1"></span>
                             </div>
                             <div class="text-holder">
-                                <h5>+11 433 43 224</h5>
+                                <h5>+11 424 23 112</h5>
                             </div>
                         </li>
                         <li>
@@ -471,34 +411,13 @@ $sq = "SELECT DISTINCT bed.*,room.Room as bid,COUNT(*) as count, bedding.Status 
                             </div>
                         </li>
                     </ul>
-                </div>
+                </div></center>
             </div>
             <!--Start single footer widget-->
             <!--Start single footer widget-->
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <div class="single-footer-widget clearfix">
-                    <div class="title">
-                        <h3>Make an Appointment</h3>
-                        <span class="border"></span>
-                    </div>
-                    <form class="appointment-form" action="#">
-                        <div class="input-box">
-                            <input type="text" name="form_name" value="" placeholder="Your Name" required="">
-                            <div class="icon-box">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="input-box">
-                            <input type="email" name="form_email" value="" placeholder="Your Email" required="">
-                            <div class="icon-box">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="input-box">
-                            <textarea name="form_message" placeholder="Your Message.." required="" aria-required="true"></textarea>
-                        </div>
-                        <button type="submit">submit</button>
-                    </form>
+             
                 </div>
             </div>
             <!--End single footer widget-->
@@ -513,7 +432,7 @@ $sq = "SELECT DISTINCT bed.*,room.Room as bid,COUNT(*) as count, bedding.Status 
         <div class="row">
             <div class="col-md-8">
                 <div class="copyright-text">
-                   <p>Copyrights © 2021 All Rights Reserved, Powered by <a href="#">Arogya Hospitals.</a></p>
+                    <p>Copyrights © 2021 All Rights Reserved, Powered by <a href="#">Arogya Hospitals.</a></p> 
                 </div>
             </div>
             <div class="col-md-4">
